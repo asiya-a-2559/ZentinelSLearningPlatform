@@ -1,0 +1,29 @@
+# Build artifacts
+target/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+mysql_data/
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+
+# Resource PDFs (large binaries, not needed for app runtime)
+resources/
