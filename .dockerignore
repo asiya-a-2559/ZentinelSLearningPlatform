@@ -1,0 +1,14 @@
+target/
+bin/
+*.class
+*.jar
+*.war
+.git
+.gitignore
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+*.md
+LICENSE

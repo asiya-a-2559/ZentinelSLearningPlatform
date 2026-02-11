@@ -22,8 +22,8 @@ public class DatabaseManager {
         String host = env("DB_HOST", "localhost");
         String port = env("DB_PORT", "3306");
         String db   = env("DB_NAME", "securitylab");
-        String user = env("DB_USER", "securitylab");
-        String pass = env("DB_PASS", "securitylab123");
+        String user = env("DB_USER", "root");
+        String pass = env("DB_PASS", "");
 
         String jdbcUrl = String.format("jdbc:mysql://%s:%s/%s?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8", host, port, db);
 

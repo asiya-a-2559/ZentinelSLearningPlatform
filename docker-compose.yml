@@ -1,0 +1,58 @@
+# ============================================================
+# ZentinelS Learning Platform — Docker Compose
+# Usage:
+#   docker compose up -d          Start everything
+#   docker compose down           Stop everything
+#   docker compose logs -f app    Watch Tomcat logs
+#   docker compose ps             Check status
+# ============================================================
+
+services:
+
+  # ── MySQL 8 ─────────────────────────────────────────────
+  mysql:
+    image: mysql:8.0
+    container_name: zentinels-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: zentinels
+      MYSQL_DATABASE: securitylab
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pzentinels"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - zentinels-net
+
+  # ── Tomcat 9 + ZentinelS WAR ───────────────────────────
+  app:
+    build: .
+    container_name: zentinels-app
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: securitylab
+      DB_USER: root
+      DB_PASS: zentinels
+    ports:
+      - "8080:8080"
+    networks:
+      - zentinels-net
+
+volumes:
+  mysql_data:
+
+networks:
+  zentinels-net:
+    driver: bridge

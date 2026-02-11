@@ -21,8 +21,8 @@ APP_URL="http://localhost:8080/securitylab/"
 DB_HOST="${DB_HOST:-localhost}"
 DB_PORT="${DB_PORT:-3306}"
 DB_NAME="${DB_NAME:-securitylab}"
-DB_USER="${DB_USER:-securitylab}"
-DB_PASS="${DB_PASS:-securitylab123}"
+DB_USER="${DB_USER:-root}"
+DB_PASS="${DB_PASS:-}"
 
 # ── Colors ──────────────────────────────────────────────────
 RED='\033[0;31m'
@@ -92,13 +92,20 @@ setup_database() {
         exit 1
     fi
 
+    # Build mysql command
+    if [ -n "$DB_PASS" ]; then
+        MYSQL_CMD="mysql -h $DB_HOST -P $DB_PORT -u $DB_USER -p$DB_PASS"
+    else
+        MYSQL_CMD="mysql -h $DB_HOST -P $DB_PORT -u $DB_USER"
+    fi
+
     info "Loading schema into MySQL ($DB_USER@$DB_HOST:$DB_PORT/$DB_NAME)..."
-    mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" < "$PROJECT_DIR/db/schema.sql" 2>/dev/null
+    $MYSQL_CMD < "$PROJECT_DIR/db/schema.sql" 2>/dev/null
 
     # Verify
-    LESSON_COUNT=$(mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" "$DB_NAME" -sNe "SELECT COUNT(*) FROM lessons;" 2>/dev/null)
-    QUIZ_COUNT=$(mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" "$DB_NAME" -sNe "SELECT COUNT(*) FROM quiz_questions;" 2>/dev/null)
-    COURSE_COUNT=$(mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" "$DB_NAME" -sNe "SELECT COUNT(*) FROM courses;" 2>/dev/null)
+    LESSON_COUNT=$($MYSQL_CMD "$DB_NAME" -sNe "SELECT COUNT(*) FROM lessons;" 2>/dev/null)
+    QUIZ_COUNT=$($MYSQL_CMD "$DB_NAME" -sNe "SELECT COUNT(*) FROM quiz_questions;" 2>/dev/null)
+    COURSE_COUNT=$($MYSQL_CMD "$DB_NAME" -sNe "SELECT COUNT(*) FROM courses;" 2>/dev/null)
 
     log "Database loaded: $COURSE_COUNT courses, $LESSON_COUNT lessons, $QUIZ_COUNT quiz questions"
 }
@@ -142,6 +149,34 @@ build_project() {
         err "Build failed — WAR file not created"
         exit 1
     fi
+
+    # List all dependency JARs
+    header "Dependency JARs"
+    info "Resolving dependency tree..."
+    JAR_LIST=$(mvn dependency:list -DoutputAbsoluteArtifactFilename=false -DincludeScope=runtime -q -DoutputFile=/dev/stdout 2>/dev/null | grep ":.*:.*:" | sed 's/^\s*//' | sort)
+    JAR_COUNT=$(echo "$JAR_LIST" | grep -c ":" 2>/dev/null || echo "0")
+
+    echo ""
+    echo -e "  ${BLUE}┌─────────────────────────────────────────┐${NC}"
+    echo -e "  ${BLUE}│  Dependency JARs ($JAR_COUNT total)${NC}"
+    echo -e "  ${BLUE}├─────────────────────────────────────────┤${NC}"
+    echo "$JAR_LIST" | while IFS= read -r line; do
+        [ -z "$line" ] && continue
+        echo -e "  ${BLUE}│${NC}  $line"
+    done
+    echo -e "  ${BLUE}└─────────────────────────────────────────┘${NC}"
+    echo ""
+
+    # Also list JARs bundled inside the WAR
+    info "JARs packaged in WAR (WEB-INF/lib/):"
+    JAR_IN_WAR=$(jar tf "$PROJECT_DIR/target/$WAR_NAME" 2>/dev/null | grep "WEB-INF/lib/.*\.jar$" | sed 's|WEB-INF/lib/||' | sort)
+    BUNDLED_COUNT=$(echo "$JAR_IN_WAR" | grep -c ".jar" 2>/dev/null || echo "0")
+
+    echo "$JAR_IN_WAR" | while IFS= read -r jar; do
+        [ -z "$jar" ] && continue
+        echo -e "    ${GREEN}✓${NC} $jar"
+    done
+    log "$BUNDLED_COUNT JARs bundled in WAR"
 }
 
 # ── Deploy ──────────────────────────────────────────────────
@@ -217,9 +252,14 @@ check_status() {
 
     # Database check
     if command -v mysql &>/dev/null; then
-        DB_OK=$(mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" "$DB_NAME" -sNe "SELECT 1;" 2>/dev/null || echo "0")
+        if [ -n "$DB_PASS" ]; then
+            MYSQL_CMD="mysql -h $DB_HOST -P $DB_PORT -u $DB_USER -p$DB_PASS"
+        else
+            MYSQL_CMD="mysql -h $DB_HOST -P $DB_PORT -u $DB_USER"
+        fi
+        DB_OK=$($MYSQL_CMD "$DB_NAME" -sNe "SELECT 1;" 2>/dev/null || echo "0")
         if [ "$DB_OK" = "1" ]; then
-            COUNTS=$(mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" "$DB_NAME" -sNe \
+            COUNTS=$($MYSQL_CMD "$DB_NAME" -sNe \
                 "SELECT CONCAT(
                     (SELECT COUNT(*) FROM courses), ' courses, ',
                     (SELECT COUNT(*) FROM lessons), ' lessons, ',
