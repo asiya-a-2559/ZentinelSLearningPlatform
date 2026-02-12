@@ -254,6 +254,96 @@ pre code {
 
 .topbar-auth { display: flex; gap: 8px; }
 
+/* ---- GLOBAL SEARCH ---- */
+.topbar-search {
+    position: relative;
+    flex: 0 1 400px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-search .search-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.topbar-search .search-input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    background: var(--card-bg);
+    transition: var(--transition);
+}
+
+.topbar-search .search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(76, 154, 255, 0.15);
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 100;
+    margin-top: 4px;
+}
+
+.search-results.hidden { display: none; }
+
+.search-result-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.search-result-item:last-child { border-bottom: none; }
+
+.search-result-item:hover {
+    background: var(--hover-bg);
+}
+
+.search-result-item .result-title {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.search-result-item .result-category {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.search-result-item .result-match {
+    font-size: 0.8rem;
+    color: var(--text-body);
+    margin-top: 4px;
+    background: #fffce0;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.search-no-results {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
 /* ---- PAGE CONTENT ---- */
 .page-content {
     flex: 1;
@@ -2051,6 +2141,217 @@ textarea.lab-input { resize: vertical; font-family: var(--font-mono); }
 .hidden { display: none !important; }
 
 /* ============================================================
+   READING TIME & META INFO
+   ============================================================ */
+.reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 4px 10px;
+    background: var(--hover-bg);
+    border-radius: var(--radius-sm);
+}
+
+.reading-time .icon { font-size: 0.9rem; }
+
+/* ============================================================
+   RELATED LESSONS
+   ============================================================ */
+.related-lessons {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-light);
+}
+
+.related-lessons h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.related-lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.related-lesson-card {
+    padding: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.related-lesson-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.related-lesson-card .title {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.related-lesson-card .category {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ============================================================
+   STREAK & GAMIFICATION
+   ============================================================ */
+.streak-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+.streak-badge .fire { font-size: 1rem; }
+
+.streak-card {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: white;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.streak-card .streak-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.streak-card .streak-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.streak-calendar {
+    display: flex;
+    gap: 4px;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.streak-day {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+.streak-day.active {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+}
+
+.streak-day.today {
+    border: 2px solid #fff;
+}
+
+/* ============================================================
+   CERTIFICATES
+   ============================================================ */
+.certificate-card {
+    background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary), #8b5cf6, #ec4899);
+}
+
+.certificate-card .cert-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.certificate-card .cert-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.certificate-card .cert-course {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.certificate-card .cert-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.certificate-card .btn {
+    margin-top: 16px;
+}
+
+.certificate-preview {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 40px;
+    background: white;
+    margin: 20px 0;
+}
+
+.certificate-preview .cert-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.certificate-preview .cert-header h1 {
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+
+.certificate-preview .cert-body {
+    text-align: center;
+}
+
+.certificate-preview .cert-body .recipient {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 16px 0;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
@@ -2061,6 +2362,7 @@ textarea.lab-input { resize: vertical; font-family: var(--font-mono); }
     .lessons-grid { grid-template-columns: 1fr; }
     .courses-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
+    .topbar-search { flex: 0 1 200px; }
 }
 
 @media (max-width: 600px) {
@@ -2069,4 +2371,5 @@ textarea.lab-input { resize: vertical; font-family: var(--font-mono); }
     .welcome-banner h1 { font-size: 1.3rem; }
     .stats-grid { grid-template-columns: 1fr; }
     .lesson-tabs { flex-wrap: wrap; }
+    .topbar-search { display: none; }
 }

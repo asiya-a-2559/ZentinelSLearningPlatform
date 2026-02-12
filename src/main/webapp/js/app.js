@@ -285,6 +285,7 @@
         const courses = await loadCourses();
         const lessons = await loadLessons();
         const completed = state.progress.filter((p) => p.completed || p.lessonStatus === 'completed').length;
+        const streak = getStreak();
 
         c.innerHTML = `
             <div class="welcome-banner">
@@ -310,8 +311,14 @@
                     <div class="stat-icon yellow">🔄</div>
                     <div class="stat-info"><div class="stat-value">${state.progress.filter((p) => p.lessonStatus === 'in_progress').length}</div><div class="stat-label">In Progress</div></div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">🔥</div>
+                    <div class="stat-info"><div class="stat-value">${streak}</div><div class="stat-label">Day Streak</div></div>
+                </div>
                 </div>
             </div>
+
+            ${renderStreakCard()}
 
             <div class="section-header"><h2>Featured Courses</h2></div>
             <div class="courses-grid" id="dashCourses"></div>
@@ -395,6 +402,7 @@
                         <div class="course-progress-bar"><div class="course-progress-fill" style="width:${progressPct}%;background:${course.color || '#4c9aff'}"></div></div>
                         <span class="course-progress-text">${completedLessons}/${totalLessons} lessons completed</span>
                     </div>` : ''}
+                    ${state.user && progressPct === 100 ? renderCertificateSection(course.title) : ''}
                 </div>
                 <div class="levels-timeline" id="levelsContainer"></div>
             </div>`;
@@ -597,17 +605,32 @@
         const pane = $('#pane-theory');
         // Content is now loaded from database via API (lessons.description column)
         const content = lesson.description || lesson.content || lesson.contentHtml || '';
+        const readingTime = getReadingTime(content);
         
         if (content && content.trim().length > 100) {
-            // Rich content from database
-            pane.innerHTML = `<div class="lesson-theory">${content}</div>`;
+            // Rich content from database with reading time and related lessons
+            pane.innerHTML = `
+                <div class="lesson-theory">
+                    <div style="margin-bottom:16px;">
+                        ${renderReadingTime(readingTime)}
+                    </div>
+                    ${content}
+                    ${renderRelatedLessons(lesson)}
+                </div>
+            `;
         } else {
             // Fallback for lessons without rich content
             pane.innerHTML = `<div class="lesson-theory">
                 <h2>${esc(lesson.title)}</h2>
                 <p>${esc(lesson.summary || 'Content for this lesson is being prepared.')}</p>
+                ${renderRelatedLessons(lesson)}
             </div>`;
         }
+        
+        // Add click handlers for related lessons
+        pane.querySelectorAll('.related-lesson-card').forEach(card => {
+            card.addEventListener('click', () => navigate(`/lesson/${card.dataset.slug}`));
+        });
     }
 
     /* ============================================================
@@ -3407,6 +3430,295 @@ public void register(String user, String pass) {
     }
 
     /* ============================================================
+       GLOBAL SEARCH
+       ============================================================ */
+    function initSearch() {
+        const searchInput = $('#globalSearch');
+        const searchResults = $('#searchResults');
+        if (!searchInput || !searchResults) return;
+
+        let debounceTimer;
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const query = searchInput.value.trim().toLowerCase();
+            
+            if (query.length < 2) {
+                searchResults.classList.add('hidden');
+                return;
+            }
+
+            debounceTimer = setTimeout(async () => {
+                await loadLessons(); // ensure lessons loaded
+                const results = state.lessons.filter(l => 
+                    l.title.toLowerCase().includes(query) ||
+                    (l.summary && l.summary.toLowerCase().includes(query)) ||
+                    (l.categoryName && l.categoryName.toLowerCase().includes(query))
+                ).slice(0, 8);
+
+                if (results.length === 0) {
+                    searchResults.innerHTML = '<div class="search-no-results">No lessons found for "' + esc(query) + '"</div>';
+                } else {
+                    searchResults.innerHTML = results.map(l => `
+                        <div class="search-result-item" data-slug="${l.slug}">
+                            <div class="result-title">${esc(l.title)}</div>
+                            <div class="result-category">${esc(l.categoryName || 'General')}</div>
+                        </div>
+                    `).join('');
+                    
+                    searchResults.querySelectorAll('.search-result-item').forEach(item => {
+                        item.addEventListener('click', () => {
+                            navigate(`/lesson/${item.dataset.slug}`);
+                            searchResults.classList.add('hidden');
+                            searchInput.value = '';
+                        });
+                    });
+                }
+                searchResults.classList.remove('hidden');
+            }, 200);
+        });
+
+        // Close search results when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.topbar-search')) {
+                searchResults.classList.add('hidden');
+            }
+        });
+
+        // Handle Escape key
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                searchResults.classList.add('hidden');
+                searchInput.blur();
+            }
+        });
+    }
+
+    /* ============================================================
+       READING TIME HELPER
+       ============================================================ */
+    function getReadingTime(content) {
+        if (!content) return 1;
+        // Approximate words: strip HTML, count words
+        const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+        const words = text.split(' ').length;
+        const minutes = Math.ceil(words / 200); // 200 words per minute
+        return Math.max(1, minutes);
+    }
+
+    function renderReadingTime(minutes) {
+        return `<span class="reading-time"><span class="icon">📖</span> ${minutes} min read</span>`;
+    }
+
+    /* ============================================================
+       RELATED LESSONS
+       ============================================================ */
+    function renderRelatedLessons(currentLesson) {
+        if (!currentLesson || !state.lessons.length) return '';
+        
+        const related = state.lessons
+            .filter(l => l.categoryId === currentLesson.categoryId && l.id !== currentLesson.id)
+            .slice(0, 4);
+        
+        if (related.length === 0) return '';
+        
+        return `
+            <div class="related-lessons">
+                <h3>📚 Related Lessons</h3>
+                <div class="related-lessons-grid">
+                    ${related.map(l => `
+                        <div class="related-lesson-card" data-slug="${l.slug}">
+                            <div class="title">${esc(l.title)}</div>
+                            <div class="category">${esc(l.categoryName || '')}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    /* ============================================================
+       STREAK TRACKING
+       ============================================================ */
+    function getStreak() {
+        // Get streak from localStorage
+        const streakData = JSON.parse(localStorage.getItem('zentinels_streak') || '{}');
+        const today = new Date().toDateString();
+        const yesterday = new Date(Date.now() - 86400000).toDateString();
+        
+        if (streakData.lastActivity === today) {
+            return streakData.count || 1;
+        } else if (streakData.lastActivity === yesterday) {
+            return streakData.count || 1;
+        } else {
+            return 0;
+        }
+    }
+
+    function updateStreak() {
+        const streakData = JSON.parse(localStorage.getItem('zentinels_streak') || '{}');
+        const today = new Date().toDateString();
+        const yesterday = new Date(Date.now() - 86400000).toDateString();
+        
+        if (streakData.lastActivity === today) {
+            // Already updated today
+            return streakData.count;
+        } else if (streakData.lastActivity === yesterday) {
+            // Continue streak
+            streakData.count = (streakData.count || 0) + 1;
+        } else {
+            // Streak broken, start fresh
+            streakData.count = 1;
+        }
+        
+        streakData.lastActivity = today;
+        streakData.history = streakData.history || [];
+        if (!streakData.history.includes(today)) {
+            streakData.history.push(today);
+            if (streakData.history.length > 30) {
+                streakData.history = streakData.history.slice(-30);
+            }
+        }
+        
+        localStorage.setItem('zentinels_streak', JSON.stringify(streakData));
+        return streakData.count;
+    }
+
+    function renderStreakBadge() {
+        const streak = getStreak();
+        if (streak === 0) return '';
+        return `<span class="streak-badge"><span class="fire">🔥</span> ${streak} day streak</span>`;
+    }
+
+    function renderStreakCard() {
+        const streakData = JSON.parse(localStorage.getItem('zentinels_streak') || '{}');
+        const streak = streakData.count || 0;
+        const history = streakData.history || [];
+        const today = new Date().toDateString();
+        
+        // Generate last 7 days
+        const days = [];
+        for (let i = 6; i >= 0; i--) {
+            const date = new Date(Date.now() - i * 86400000);
+            const dateStr = date.toDateString();
+            const dayName = date.toLocaleDateString('en', { weekday: 'short' }).charAt(0);
+            days.push({
+                day: dayName,
+                active: history.includes(dateStr),
+                today: dateStr === today
+            });
+        }
+        
+        return `
+            <div class="streak-card">
+                <div class="streak-number">${streak}</div>
+                <div class="streak-label">Day Streak 🔥</div>
+                <div class="streak-calendar">
+                    ${days.map(d => `
+                        <div class="streak-day ${d.active ? 'active' : ''} ${d.today ? 'today' : ''}">${d.day}</div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    /* ============================================================
+       PDF CERTIFICATE GENERATION
+       ============================================================ */
+    function generateCertificate(courseName, userName) {
+        // Create certificate content
+        const certDate = new Date().toLocaleDateString('en-US', { 
+            year: 'numeric', month: 'long', day: 'numeric' 
+        });
+        
+        const certHTML = `
+            <div style="width:800px;height:600px;padding:40px;background:linear-gradient(135deg,#f8fafc,#fff);border:4px solid #1a202c;position:relative;font-family:Georgia,serif;">
+                <div style="position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,#4c9aff,#8b5cf6,#ec4899);"></div>
+                <div style="text-align:center;margin-top:40px;">
+                    <div style="font-size:16px;letter-spacing:8px;color:#718096;">CERTIFICATE OF COMPLETION</div>
+                    <div style="font-size:48px;margin:20px 0;color:#1a202c;">⚡ ZentinelS</div>
+                    <div style="font-size:14px;color:#718096;">Learning Platform</div>
+                </div>
+                <div style="text-align:center;margin:50px 0;">
+                    <div style="font-size:16px;color:#4a5568;">This is to certify that</div>
+                    <div style="font-size:32px;color:#4c9aff;margin:15px 0;font-weight:bold;">${esc(userName)}</div>
+                    <div style="font-size:16px;color:#4a5568;">has successfully completed the course</div>
+                    <div style="font-size:24px;color:#1a202c;margin:15px 0;font-weight:bold;">${esc(courseName)}</div>
+                </div>
+                <div style="text-align:center;margin-top:60px;">
+                    <div style="font-size:14px;color:#718096;">${certDate}</div>
+                    <div style="margin-top:30px;border-top:2px solid #e2e8f0;display:inline-block;padding-top:10px;width:200px;">
+                        <div style="font-size:12px;color:#718096;">ZentinelS Academy</div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Open in new window for printing
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Certificate - ${courseName}</title>
+                <style>
+                    body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f0f0f0; }
+                    @media print {
+                        body { background: white; }
+                        .no-print { display: none; }
+                    }
+                </style>
+            </head>
+            <body>
+                ${certHTML}
+                <div class="no-print" style="position:fixed;top:20px;right:20px;">
+                    <button onclick="window.print()" style="padding:12px 24px;background:#4c9aff;color:white;border:none;border-radius:8px;cursor:pointer;font-size:14px;">
+                        🖨️ Print Certificate
+                    </button>
+                </div>
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+    }
+
+    function renderCertificateSection(course) {
+        if (!state.user) return '';
+        
+        // Check if course is completed
+        const courseLessons = state.lessons.filter(l => l.courseId === course.id);
+        const completedLessons = courseLessons.filter(l => isLessonCompleted(l.id));
+        const isComplete = courseLessons.length > 0 && completedLessons.length === courseLessons.length;
+        
+        if (!isComplete) {
+            return `
+                <div class="certificate-card" style="opacity:0.6;">
+                    <div class="cert-icon">🎓</div>
+                    <div class="cert-title">Certificate Locked</div>
+                    <div class="cert-course">Complete all ${courseLessons.length} lessons to unlock</div>
+                    <div class="cert-progress">${completedLessons.length}/${courseLessons.length} completed</div>
+                </div>
+            `;
+        }
+        
+        return `
+            <div class="certificate-card">
+                <div class="cert-icon">🏆</div>
+                <div class="cert-title">Certificate Earned!</div>
+                <div class="cert-course">${esc(course.title)}</div>
+                <button class="btn btn-primary" onclick="window.appGenerateCert('${esc(course.title)}')">
+                    📜 View Certificate
+                </button>
+            </div>
+        `;
+    }
+
+    // Expose certificate generation to window for onclick
+    window.appGenerateCert = (courseName) => {
+        const userName = state.user?.displayName || state.user?.username || 'Student';
+        generateCertificate(courseName, userName);
+    };
+
+    /* ============================================================
        UTILITIES
        ============================================================ */
     function esc(s) {
@@ -3422,7 +3734,9 @@ public void register(String user, String pass) {
     document.addEventListener('DOMContentLoaded', () => {
         initAuth();
         initSidebar();
+        initSearch();
         checkSession();
+        updateStreak(); // Update streak on page load
         window.addEventListener('hashchange', router);
         router();
     });
