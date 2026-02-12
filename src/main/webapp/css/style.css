@@ -571,6 +571,20 @@ pre code {
     margin-bottom: 20px;
 }
 
+.streak-corner {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fbbf24;
+    z-index: 1;
+}
+
 /* Stats Grid */
 .stats-grid {
     display: grid;

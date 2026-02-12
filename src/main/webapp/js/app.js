@@ -289,6 +289,7 @@
 
         c.innerHTML = `
             <div class="welcome-banner">
+                <div class="streak-corner">${streak > 0 ? `🔥 ${streak} day streak` : ''}</div>
                 <h1>⚡ ZentinelS Learning Platform</h1>
                 <p>Master cybersecurity through interactive courses, live demos, and hands-on lab exercises. Sharpen your offensive and defensive security skills.</p>
                 <a href="#/courses" class="btn btn-primary">Browse Courses →</a>
@@ -311,21 +312,20 @@
                     <div class="stat-icon yellow">🔄</div>
                     <div class="stat-info"><div class="stat-value">${state.progress.filter((p) => p.lessonStatus === 'in_progress').length}</div><div class="stat-label">In Progress</div></div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon orange">🔥</div>
-                    <div class="stat-info"><div class="stat-value">${streak}</div><div class="stat-label">Day Streak</div></div>
-                </div>
                 </div>
             </div>
-
-            ${renderStreakCard()}
 
             <div class="section-header"><h2>Featured Courses</h2></div>
             <div class="courses-grid" id="dashCourses"></div>
         `;
 
         const g = $('#dashCourses');
-        courses.slice(0, 3).forEach((course) => g.appendChild(courseCardEl(course)));
+        // Featured courses in specific order: Offensive Security, Computer Components, Web
+        const featuredSlugs = ['offensive-security', 'computer-components', 'web'];
+        const featuredCourses = featuredSlugs
+            .map(slug => courses.find(c => c.slug === slug))
+            .filter(Boolean);
+        featuredCourses.forEach((course) => g.appendChild(courseCardEl(course)));
     }
 
     /* ---- Courses List ---- */
@@ -402,7 +402,7 @@
                         <div class="course-progress-bar"><div class="course-progress-fill" style="width:${progressPct}%;background:${course.color || '#4c9aff'}"></div></div>
                         <span class="course-progress-text">${completedLessons}/${totalLessons} lessons completed</span>
                     </div>` : ''}
-                    ${state.user && progressPct === 100 ? renderCertificateSection(course.title) : ''}
+                    ${state.user ? renderCertificateSection(course, totalLessons, completedLessons) : ''}
                 </div>
                 <div class="levels-timeline" id="levelsContainer"></div>
             </div>`;
@@ -507,7 +507,7 @@
         const c = content();
         c.innerHTML = '<div class="loading-screen"><div class="spinner"></div><span>Loading lesson…</span></div>';
         const slug = match[1];
-        const lesson = await loadLesson(slug);
+        const [lesson] = await Promise.all([loadLesson(slug), loadLessons()]); // Load lessons for related section
         if (!lesson) { c.innerHTML = '<div class="empty-state"><div class="icon">😕</div><p>Lesson not found.</p></div>'; return; }
         state.currentLesson = lesson;
 
@@ -3448,9 +3448,15 @@ public void register(String user, String pass) {
             }
 
             debounceTimer = setTimeout(async () => {
-                await loadLessons(); // ensure lessons loaded
-                const results = state.lessons.filter(l => 
-                    l.title.toLowerCase().includes(query) ||
+                const lessons = await loadLessons(); // ensure lessons loaded
+                if (!lessons || lessons.length === 0) {
+                    searchResults.innerHTML = '<div class="search-no-results">No lessons available</div>';
+                    searchResults.classList.remove('hidden');
+                    return;
+                }
+                
+                const results = lessons.filter(l => 
+                    (l.title && l.title.toLowerCase().includes(query)) ||
                     (l.summary && l.summary.toLowerCase().includes(query)) ||
                     (l.categoryName && l.categoryName.toLowerCase().includes(query))
                 ).slice(0, 8);
@@ -3681,21 +3687,18 @@ public void register(String user, String pass) {
         printWindow.document.close();
     }
 
-    function renderCertificateSection(course) {
+    function renderCertificateSection(course, totalLessons, completedLessons) {
         if (!state.user) return '';
         
-        // Check if course is completed
-        const courseLessons = state.lessons.filter(l => l.courseId === course.id);
-        const completedLessons = courseLessons.filter(l => isLessonCompleted(l.id));
-        const isComplete = courseLessons.length > 0 && completedLessons.length === courseLessons.length;
+        const isComplete = totalLessons > 0 && completedLessons === totalLessons;
         
         if (!isComplete) {
             return `
-                <div class="certificate-card" style="opacity:0.6;">
+                <div class="certificate-card" style="opacity:0.7;">
                     <div class="cert-icon">🎓</div>
                     <div class="cert-title">Certificate Locked</div>
-                    <div class="cert-course">Complete all ${courseLessons.length} lessons to unlock</div>
-                    <div class="cert-progress">${completedLessons.length}/${courseLessons.length} completed</div>
+                    <div class="cert-course">Complete all ${totalLessons} lessons to unlock</div>
+                    <div class="cert-progress">${completedLessons}/${totalLessons} completed</div>
                 </div>
             `;
         }
