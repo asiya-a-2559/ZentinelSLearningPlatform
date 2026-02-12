@@ -198,6 +198,33 @@ Single-script deployment with 4 modes:
 
 ---
 
+## Technical Skills Required
+
+### Backend (Java)
+- **Java 17** - Core language
+- **Java Servlets** - HTTP request handling (`HttpServlet`, `doGet`, `doPost`)
+- **JDBC** - Database connectivity and SQL operations
+- **MySQL 8.0** - Relational database design and queries
+- **JSON Processing** - Gson library for API responses
+- **Servlet Filters** - Request/response interceptors (CORS, Auth, NoCache)
+- **Session Management** - User authentication state
+
+### Frontend (Pure JavaScript SPA)
+- **Vanilla JavaScript (ES6+)** - No frameworks
+- **HTML5/CSS3** - Semantic markup, Flexbox, Grid
+- **Hash-based Routing** - SPA navigation without page reloads
+- **Async/Await** - API communication
+- **DOM Manipulation** - Dynamic content rendering
+- **LocalStorage** - Client-side persistence (streaks)
+
+### DevOps
+- **Apache Tomcat 9.x** - Servlet container deployment
+- **Maven** - Build automation and dependency management
+- **Docker** - Containerization (MySQL)
+- **Bash scripting** - Deployment automation
+
+---
+
 ## Content Scale
 
 | Metric | Count |
