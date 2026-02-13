@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Console - ZentinelS</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">INITIALIZING ADMIN CONSOLE...</div>
+        </div>
+    </div>
+
+    <!-- Access Denied Screen -->
+    <div id="access-denied" class="access-denied hidden">
+        <div class="denied-content">
+            <div class="denied-icon">⛔</div>
+            <h1>ACCESS DENIED</h1>
+            <p>You don't have permission to access the Admin Console.</p>
+            <p class="sub">Only admin and instructor accounts can access this area.</p>
+            <a href="index.html" class="btn-back">← Return to Learning Platform</a>
+        </div>
+    </div>
+
+    <!-- Main Admin Console -->
+    <div id="admin-app" class="admin-app hidden">
+        <!-- Top Header -->
+        <header class="admin-header">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">ZentinelS</span>
+                    <span class="logo-badge">ADMIN</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="status-bar">
+                    <span class="status-item"><span class="status-dot online"></span> System Online</span>
+                    <span class="status-item" id="server-time">--:--:--</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <span class="user-role" id="admin-role">ADMIN</span>
+                    <span class="user-name" id="admin-name">Loading...</span>
+                </div>
+                <button id="btn-logout" class="btn-logout">
+                    <span>Logout</span>
+                    <span class="icon">⏻</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="admin-body">
+            <!-- Sidebar Navigation -->
+            <nav class="admin-sidebar">
+                <div class="nav-section">
+                    <div class="nav-label">OVERVIEW</div>
+                    <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                    <a href="#activity" class="nav-item" data-section="activity">
+                        <span class="nav-icon">📜</span>
+                        <span class="nav-text">Activity Log</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-label">MANAGEMENT</div>
+                    <a href="#users" class="nav-item" data-section="users">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Users</span>
+                    </a>
+                    <a href="#courses" class="nav-item" data-section="courses">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Courses</span>
+                    </a>
+                    <a href="#lessons" class="nav-item" data-section="lessons">
+                        <span class="nav-icon">📝</span>
+                        <span class="nav-text">Lessons</span>
+                    </a>
+                    <a href="#quizzes" class="nav-item" data-section="quizzes">
+                        <span class="nav-icon">❓</span>
+                        <span class="nav-text">Quiz Questions</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-label">ANALYTICS</div>
+                    <a href="#analytics" class="nav-item" data-section="analytics">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Progress Analytics</span>
+                    </a>
+                </div>
+                <div class="nav-footer">
+                    <a href="index.html" class="nav-item">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">Back to Platform</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="admin-content">
+                <!-- Dashboard Section -->
+                <section id="section-dashboard" class="content-section active">
+                    <div class="section-header">
+                        <h1>📊 Dashboard</h1>
+                        <button class="btn-refresh" onclick="loadDashboard()">🔄 Refresh</button>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">👥</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-users">--</div>
+                                <div class="stat-label">Total Users</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📚</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-courses">--</div>
+                                <div class="stat-label">Courses</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📝</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-lessons">--</div>
+                                <div class="stat-label">Lessons</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">❓</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-quizzes">--</div>
+                                <div class="stat-label">Quiz Questions</div>
+                            </div>
+                        </div>
+                        <div class="stat-card highlight">
+                            <div class="stat-icon">✅</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-completions">--</div>
+                                <div class="stat-label">Completed Lessons</div>
+                            </div>
+                        </div>
+                        <div class="stat-card highlight">
+                            <div class="stat-icon">🎯</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-avg-score">--</div>
+                                <div class="stat-label">Avg Quiz Score</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🆕</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-new-users">--</div>
+                                <div class="stat-label">New Users (7d)</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-info">
+                                <div class="stat-value" id="stat-attempts">--</div>
+                                <div class="stat-label">Quiz Attempts</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-row">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>👥 Users by Role</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="users-by-role" class="role-bars"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>📚 Course Progress</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="course-progress" class="course-bars"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activity Section -->
+                <section id="section-activity" class="content-section">
+                    <div class="section-header">
+                        <h1>📜 Recent Activity</h1>
+                        <button class="btn-refresh" onclick="loadActivity()">🔄 Refresh</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="data-table" id="activity-table">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>User</th>
+                                        <th>Lesson</th>
+                                        <th>Status</th>
+                                        <th>Quiz Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Users Section -->
+                <section id="section-users" class="content-section">
+                    <div class="section-header">
+                        <h1>👥 User Management</h1>
+                        <div class="header-actions">
+                            <input type="text" id="user-search" placeholder="Search users..." class="search-input">
+                            <select id="user-role-filter" class="filter-select">
+                                <option value="">All Roles</option>
+                                <option value="student">Student</option>
+                                <option value="instructor">Instructor</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                            <button class="btn-refresh" onclick="loadUsers()">🔄 Refresh</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="data-table" id="users-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Display Name</th>
+                                        <th>Role</th>
+                                        <th>Progress</th>
+                                        <th>Avg Score</th>
+                                        <th>Joined</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Courses Section -->
+                <section id="section-courses" class="content-section">
+                    <div class="section-header">
+                        <h1>📚 Courses Overview</h1>
+                        <button class="btn-refresh" onclick="loadCourses()">🔄 Refresh</button>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="data-table" id="courses-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                        <th>Slug</th>
+                                        <th>Lessons</th>
+                                        <th>Quiz Questions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Lessons Section -->
+                <section id="section-lessons" class="content-section">
+                    <div class="section-header">
+                        <h1>📝 Lesson Management</h1>
+                        <div class="header-actions">
+                            <select id="lesson-course-filter" class="filter-select">
+                                <option value="">All Courses</option>
+                            </select>
+                            <input type="text" id="lesson-search" placeholder="Search lessons..." class="search-input">
+                            <button class="btn-refresh" onclick="loadLessons()">🔄 Refresh</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="data-table" id="lessons-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Course</th>
+                                        <th>Title</th>
+                                        <th>Difficulty</th>
+                                        <th>Content Length</th>
+                                        <th>Quizzes</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quizzes Section -->
+                <section id="section-quizzes" class="content-section">
+                    <div class="section-header">
+                        <h1>❓ Quiz Management</h1>
+                        <div class="header-actions">
+                            <select id="quiz-lesson-filter" class="filter-select">
+                                <option value="">All Lessons</option>
+                            </select>
+                            <input type="text" id="quiz-search" placeholder="Search questions..." class="search-input">
+                            <button class="btn-primary" onclick="showAddQuizModal()">+ Add Question</button>
+                            <button class="btn-refresh" onclick="loadQuizzes()">🔄 Refresh</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="data-table" id="quizzes-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Lesson</th>
+                                        <th>Question</th>
+                                        <th>Correct</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analytics Section -->
+                <section id="section-analytics" class="content-section">
+                    <div class="section-header">
+                        <h1>📈 Progress Analytics</h1>
+                        <button class="btn-refresh" onclick="loadAnalytics()">🔄 Refresh</button>
+                    </div>
+                    
+                    <div class="analytics-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>🏆 Top Learners</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="data-table" id="top-users-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>User</th>
+                                            <th>Completed</th>
+                                            <th>Avg Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>📊 Course Completion Rates</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="course-completion-bars"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>📅 Daily Activity (Last 30 Days)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="daily-activity-chart" class="activity-chart"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal for editing -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal" id="edit-modal">
+            <div class="modal-header">
+                <h2 id="modal-title">Edit</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn-primary" id="modal-save">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
