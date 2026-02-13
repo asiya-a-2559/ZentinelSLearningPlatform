@@ -231,7 +231,8 @@ function renderCourseProgress(courseStats) {
     
     container.innerHTML = courseStats.map(c => `
         <div class="course-bar">
-            <span class="course-name" title="${c.title}">C${c.id}</span>
+            <span class="course-id">C${c.id}</span>
+            <span class="course-name" title="${c.title}">${c.title}</span>
             <div class="course-bar-fill">
                 <div class="course-bar-inner" style="width: ${(c.totalLessons / maxLessons) * 100}%"></div>
             </div>
