@@ -313,25 +313,50 @@
     }
 
     function updateAuthUI() {
-        const signIn = $('#signInBtn');
-        const signUp = $('#signUpBtn');
-        const logout = $('#logoutBtn');
+        const topbarAuth = $('#topbarAuth');
+        const topbarUser = $('#topbarUser');
+        const topbarName = $('#topbarName');
+        const topbarAvatar = $('#topbarAvatar');
+        const userDropdown = $('#userDropdown');
+        const userProfileBtn = $('#userProfileBtn');
         const userSection = $('#sidebarUser');
         const userName = $('#sidebarUserName');
         const userAvatar = $('#sidebarUserAvatar');
 
         if (state.user) {
-            if (signIn) signIn.classList.add('hidden');
-            if (signUp) signUp.classList.add('hidden');
-            if (logout) logout.classList.remove('hidden');
+            const initial = (state.user.displayName || state.user.username || 'U').charAt(0).toUpperCase();
+            const displayName = state.user.displayName || state.user.username;
+            
+            // Hide sign in/up, show user profile in topbar
+            if (topbarAuth) topbarAuth.classList.add('hidden');
+            if (topbarUser) topbarUser.classList.remove('hidden');
+            if (topbarName) topbarName.textContent = displayName;
+            if (topbarAvatar) topbarAvatar.textContent = initial;
+            
+            // Sidebar user section
             if (userSection) userSection.classList.remove('hidden');
-            if (userName) userName.textContent = state.user.displayName || state.user.username;
-            if (userAvatar) userAvatar.textContent = (state.user.displayName || state.user.username || 'U').charAt(0).toUpperCase();
+            if (userName) userName.textContent = displayName;
+            if (userAvatar) userAvatar.textContent = initial;
+            
+            // Setup dropdown toggle
+            if (userProfileBtn && userDropdown) {
+                userProfileBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    userDropdown.classList.toggle('hidden');
+                };
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!userProfileBtn.contains(e.target) && !userDropdown.contains(e.target)) {
+                        userDropdown.classList.add('hidden');
+                    }
+                });
+            }
         } else {
-            if (signIn) signIn.classList.remove('hidden');
-            if (signUp) signUp.classList.remove('hidden');
-            if (logout) logout.classList.add('hidden');
+            // Show sign in/up, hide user profile
+            if (topbarAuth) topbarAuth.classList.remove('hidden');
+            if (topbarUser) topbarUser.classList.add('hidden');
             if (userSection) userSection.classList.add('hidden');
+            if (userDropdown) userDropdown.classList.add('hidden');
         }
     }
 
@@ -7791,6 +7816,23 @@ public void register(String user, String pass) {
         checkSession();
         updateStreak(); // Update streak on page load
         window.addEventListener('hashchange', router);
+        
+        // Handle signin/signup hash from admin redirect
+        const hash = window.location.hash;
+        if (hash === '#signin' || hash === '#login') {
+            setTimeout(() => {
+                const signInBtn = $('#signInBtn');
+                if (signInBtn) signInBtn.click();
+                window.location.hash = '#/';
+            }, 100);
+        } else if (hash === '#signup' || hash === '#register') {
+            setTimeout(() => {
+                const signUpBtn = $('#signUpBtn');
+                if (signUpBtn) signUpBtn.click();
+                window.location.hash = '#/';
+            }, 100);
+        }
+        
         router();
     });
 })();

@@ -33,7 +33,6 @@
                 <button type="submit" class="btn btn-primary btn-block" id="authSubmitBtn">Sign In</button>
             </form>
             <p class="auth-footer" id="authToggleText">Don't have an account? <a href="#" id="authToggle">Sign up</a></p>
-            <div class="auth-demo">💡 Demo: username <strong>demo</strong> / password <strong>demo123</strong></div>
         </div>
     </div>
 
@@ -79,15 +78,7 @@
                         <span class="nav-icon">🏆</span> Achievements
                     </div>
                 </div>
-                <div class="nav-section">
-                    <span class="nav-label">ACCOUNT</span>
-                    <div class="nav-item" id="signInBtn">
-                        <span class="nav-icon">🔐</span> Sign In
-                    </div>
-                    <div class="nav-item hidden" id="logoutBtn">
-                        <span class="nav-icon">🚪</span> Sign Out
-                    </div>
-                </div>
+
             </nav>
 
             <div class="sidebar-footer">
@@ -110,8 +101,22 @@
                     <div class="search-results hidden" id="searchResults"></div>
                 </div>
                 <div class="topbar-actions">
-                    <div class="topbar-auth">
+                    <div class="topbar-auth" id="topbarAuth">
+                        <button class="btn btn-outline btn-sm" id="signInBtn">Sign In</button>
                         <button class="btn btn-primary btn-sm" id="signUpBtn">Sign Up</button>
+                    </div>
+                    <div class="topbar-user hidden" id="topbarUser">
+                        <div class="user-profile-btn" id="userProfileBtn">
+                            <div class="profile-avatar" id="topbarAvatar">U</div>
+                            <span class="profile-name" id="topbarName">User</span>
+                            <span class="profile-chevron">▾</span>
+                        </div>
+                        <div class="user-dropdown hidden" id="userDropdown">
+                            <button class="dropdown-item" id="logoutBtn">
+                                <span class="dropdown-icon">⏻</span>
+                                Sign Out
+                            </button>
+                        </div>
                     </div>
                 </div>
             </header>

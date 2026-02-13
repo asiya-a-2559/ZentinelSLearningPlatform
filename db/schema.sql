@@ -285,7 +285,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'demo','demo@zentinels.local','d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791','Demo User',NULL,'student','2026-02-10 22:07:37'),(2,'admin','admin@zentinels.local','240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9','Admin',NULL,'admin','2026-02-10 22:07:37');
+INSERT INTO `users` VALUES (1,'demo','demo@zentinels.local','d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791','Demo User',NULL,'admin','2026-02-10 22:07:37'),(2,'admin','admin@zentinels.local','240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9','Admin',NULL,'admin','2026-02-10 22:07:37');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -298,4 +298,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-13 10:50:08
+-- Dump completed on 2026-02-13 11:55:16
