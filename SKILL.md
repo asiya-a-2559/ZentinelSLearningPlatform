@@ -92,7 +92,7 @@ Extract and structure educational content from PDF source material into a web-de
 
 ### 6. Course Structure
 
-6 progressive courses from hardware fundamentals to offensive security:
+11 progressive courses from hardware fundamentals to AI/ML:
 
 | # | Course | Lessons | Scope |
 |---|--------|---------|-------|
@@ -101,7 +101,12 @@ Extract and structure educational content from PDF source material into a web-de
 | C3 | Linux | 17 | Navigation, permissions, shell, processes |
 | C4 | Web | 9 | HTTP, DNS, cookies, web architecture |
 | C5 | Networking | 24 | TCP/IP, routing, firewalls, protocols |
-| C6 | Offensive Security | 32 | Reconnaissance, exploitation, privilege escalation |
+| C6 | Offensive Security Concepts | 32 | Reconnaissance, exploitation, privilege escalation |
+| C7 | Servers & Services | 35 | Web servers, databases, email, DNS, DHCP |
+| C8 | Advanced Hardware | 16 | BIOS/UEFI, firmware, hardware security |
+| C9 | Security Concepts | 52 | Cryptography, authentication, access control |
+| C10 | Network Infiltration | 23 | Lateral movement, pivoting, data exfiltration |
+| C11 | AI/ML Fundamentals | 40 | Python, NumPy, Pandas, ML algorithms, deep learning |
 
 **Hierarchy**: `course → level → category → lesson`
 

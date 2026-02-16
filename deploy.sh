@@ -87,8 +87,8 @@ check_prereqs() {
 setup_database() {
     header "Database Setup"
 
-    if [ ! -f "$PROJECT_DIR/db/schema.sql" ]; then
-        err "db/schema.sql not found"
+    if [ ! -f "$PROJECT_DIR/db/data/schema.sql" ]; then
+        err "db/data/schema.sql not found"
         exit 1
     fi
 
@@ -100,7 +100,7 @@ setup_database() {
     fi
 
     info "Loading schema into MySQL ($DB_USER@$DB_HOST:$DB_PORT/$DB_NAME)..."
-    $MYSQL_CMD < "$PROJECT_DIR/db/schema.sql" 2>/dev/null
+    $MYSQL_CMD < "$PROJECT_DIR/db/data/schema.sql" 2>/dev/null
 
     # Verify
     LESSON_COUNT=$($MYSQL_CMD "$DB_NAME" -sNe "SELECT COUNT(*) FROM lessons;" 2>/dev/null)

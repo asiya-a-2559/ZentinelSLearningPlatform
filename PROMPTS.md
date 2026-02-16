@@ -54,16 +54,20 @@ State management with a simple state object for user, courses, lessons, progress
 
 ## 5. Course Content Structure
 ```
-Create 8 security courses:
+Create 11 security and technology courses:
 1. Computer Components & Concepts (motherboard, CPU, RAM, binary, ASCII, base64, etc.)
 2. OS and Virtualization (boot process, hypervisors, VMs)
 3. Linux (terminal, sudo, file permissions, processes, SSH)
 4. Web (HTTP, cookies, Google dorks)
 5. Networking (hardware, IP, TCP/UDP, subnets, DNS, OSI model, DoS)
-6. Offensive Security (SQLi, XSS, CSRF, IDOR, command injection, path traversal, etc.)
-7. Servers and Services
-8. Advanced Hardware
+6. Offensive Security Concepts (SQLi, XSS, CSRF, IDOR, command injection, path traversal, etc.)
+7. Servers and Services (web servers, databases, email, DNS, DHCP, FTP)
+8. Advanced Hardware (BIOS/UEFI, firmware, hardware security modules)
+9. Security Concepts (cryptography, authentication, access control, PKI)
+10. Network Infiltration (lateral movement, pivoting, data exfiltration, covert channels)
+11. AI/ML Fundamentals (Python, NumPy, Pandas, ML algorithms, neural networks, NLP)
 
+Total: 266 lessons across 52 levels with 1336 quiz questions.
 Each course has multiple levels, each level has multiple lessons.
 Each lesson has: Theory, Interactive Demo, Hands-on Lab, Quiz
 ```

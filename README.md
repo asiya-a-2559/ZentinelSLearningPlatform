@@ -28,7 +28,7 @@
 | **Database** | MySQL 8.0 |
 | **Dependencies** | Gson 2.10.1, MySQL Connector 8.0.33, HikariCP 5.0.1, SLF4J 2.0.9 |
 | **Build** | Maven 3.8+ |
-| **Courses** | 6 courses, 21 levels, 100 lessons, 108 quiz questions, 25 categories |
+| **Courses** | 11 courses, 52 levels, 266 lessons, 1336 quiz questions, 51 categories |
 | **Fonts** | Inter (UI) + JetBrains Mono (code) from Google Fonts |
 
 ### Course Structure
@@ -41,6 +41,11 @@
 | C4 | Web | 9 | Beginner |
 | C5 | Networking | 24 | Intermediate |
 | C6 | Offensive Security Concepts | 32 | Intermediate |
+| C7 | Servers & Services | 35 | Intermediate |
+| C8 | Advanced Hardware | 16 | Intermediate |
+| C9 | Security Concepts | 52 | Advanced |
+| C10 | Network Infiltration | 23 | Advanced |
+| C11 | AI/ML Fundamentals | 40 | Advanced |
 
 ### Each Lesson Has 4 Tabs
 1. **Theory** — Rich HTML content (rendered from a client-side `theories` object keyed by lesson slug)
