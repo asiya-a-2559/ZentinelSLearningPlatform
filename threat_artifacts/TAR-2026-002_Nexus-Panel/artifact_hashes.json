@@ -1,0 +1,22 @@
+[
+  {
+    "file": "Threat_Report_TAR-2026-002_Nexus-Panel.md",
+    "sha256": "909bd54cfd64bdb2be2a9e91f2e96e8bdfbf69b7e9b1791ee670ca098203e474",
+    "size": 3219
+  },
+  {
+    "file": "remote_image_metadata.json",
+    "sha256": "6393cf335b8cb771dc61ed4d654b64ab91abb2bdf3477dde68e32c046af62921",
+    "size": 1085
+  },
+  {
+    "file": "evidence_lines.json",
+    "sha256": "3595238a66867082c7f3388917f46eefd7b5dee2f2ccff2a13469e3a10b0b920",
+    "size": 40491
+  },
+  {
+    "file": "ioc_urls.txt",
+    "sha256": "f4f7b32189871ff4f998028a41ad0bcc2b2664fbd0d7a4d7c7a7337169663a4e",
+    "size": 510
+  }
+]
