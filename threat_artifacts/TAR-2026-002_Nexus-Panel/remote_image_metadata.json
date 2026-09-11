@@ -1,0 +1,29 @@
+{
+  "analysis_timestamp_utc": "2026-09-11T08:58:57.642112Z",
+  "target_repository": "zohomail/nexus-panel",
+  "tag": "latest",
+  "index_mediaType": "application/vnd.oci.image.index.v1+json",
+  "amd64_manifest_digest": "sha256:ec883e693d95d27423b19e71a56b6ab74395d1a2f18cdd03fcc2daba25e1c9b4",
+  "amd64_manifest_size": 2778,
+  "config_digest": "sha256:0fb15a8fef1cf1d1c8dc83b37ba1feb88d9a2970cf4773c85f99d621fca3d93e",
+  "config_size": 8978,
+  "layer_count": 13,
+  "layer_total_size": 856483857,
+  "runtime_cmd": [
+    "sh",
+    "-c",
+    "uvicorn server.main:app --host 0.0.0.0 --port ${PORT:-10000} --ws-ping-interval 0"
+  ],
+  "runtime_entrypoint": null,
+  "working_dir": "/app",
+  "env": [
+    "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+    "PYTHON_VERSION=3.13.15",
+    "PYTHON_SHA256=1e66a7945a48390ee4c2a4268a0e4185884059a13c4aab6d148aa208deea4a76",
+    "NEXUS_DB_PATH=/data/nexus.db",
+    "NEXUS_SERVICES_DIR=/app/services",
+    "NEXUS_RELAY_DIR=/app/relay",
+    "PORT=10000"
+  ]
+}

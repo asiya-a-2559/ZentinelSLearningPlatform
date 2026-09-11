@@ -1,0 +1,13 @@
+http://ip-api.com/json/{ip}
+http://proxycheck.io/v2/{ip}?vpn=1&asn=1
+https://api.telegram.org
+https://challenges.cloudflare.com/turnstile/v0/api.js
+https://challenges.cloudflare.com/turnstile/v0/siteverify
+https://hcaptcha.com/siteverify
+https://ipwho.is/{ip}
+https://js.hcaptcha.com/1/api.js
+https://openphish.com/feed.txt
+https://phishstats.info:2096/api/phishing
+https://urlhaus-api.abuse.ch/v1/host/
+https://www.google.com/recaptcha/api.js?render={safe_key}
+https://www.google.com/recaptcha/api/siteverify
